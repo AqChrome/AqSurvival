@@ -1,0 +1,57 @@
+author = "AqChrome";
+onLoadName = "AqWorld PMC";
+loadScreen = "";
+
+class Header {
+    gameType = Coop;
+    minPlayers = 1;
+    maxPlayers = 4;
+};
+
+class CfgPatches {
+    class AqWorldPMC {
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = 1.0;
+        requiredAddons[] = {
+            "cba_main",
+            "ace_main",
+            "ace_medical",
+            "A3_Weapons_F"
+        };
+    };
+};
+
+class CfgSettings {
+    class CBA {
+        class Versioning {
+            class AqWorldPMC {
+                main_addon = "AqWorldPMC";
+                class Dependencies {
+                    CBA[] = {"cba_main", {3,18,4}, "(true)"};
+                };
+            };
+        };
+    };
+};
+
+class CfgFunctions {
+    class AQ {
+    tag = "AQ";
+    class Needs {
+        file = "core\survival\needs\inventory";
+        class onInventoryDblClick {};
+        class tryEat {};
+        class tryDrink {};
+    };
+    };
+
+    #define HALs_DEF_FUNCTIONS
+    #include "core\economy\HALs\Addons\main\config.hpp"
+    #undef HALs_DEF_FUNCTIONS
+};
+#define HALs_DEF_INIT
+#include "core\economy\HALs\Addons\main\config.hpp"
+#undef HALs_DEF_INIT
+
+#include "core\config.hpp"
