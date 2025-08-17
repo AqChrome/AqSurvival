@@ -12,4 +12,16 @@ class AQ {
 	};
 };
 
+class AQPH {
+    tag = "AQPH";
+    class Phone {
+      file = "aq_phone\functions";
+      class init {};
+      class registerKeys {};
+      class show {};
+      class hide {};
+      class buildUI {};
+    };
+};
+
     

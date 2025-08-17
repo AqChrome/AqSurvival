@@ -1,3 +1,4 @@
+[] call AQPH_fnc_init;
 player addEventHandler ["InventoryOpened", {
     [{
         !(isNull (findDisplay 602))

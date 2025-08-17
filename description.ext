@@ -22,6 +22,17 @@ class CfgPatches {
     };
 };
 
+// Диалог смартфона (даёт курсор при необходимости; но мы курсор не показываем)
+class AQPH_Dialog {
+  idd = 88001;
+  movingEnable = 0;
+  enableSimulation = 1;
+  onLoad   = "uiNamespace setVariable ['AQPH_Display', _this select 0]";
+  onUnload = "uiNamespace setVariable ['AQPH_Display', displayNull]";
+  class controls {};
+  class controlsBackground {};
+};
+
 class CfgSettings {
     class CBA {
         class Versioning {
