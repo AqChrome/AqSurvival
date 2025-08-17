@@ -5,7 +5,7 @@
   _root displayAddEventHandler ["KeyDown", {
     params ["_d","_key"];
 
-    // ↑ открыть (если ещё не открыт)
+    // ↑ открыть, если ещё не открыт (DIK_UP = 200)
     if (_key isEqualTo 200) exitWith {
       if (!(uiNamespace getVariable ["AQPH_open", false])) then {
         [] call AQPH_fnc_show;
@@ -13,7 +13,7 @@
       } else { false };
     };
 
-    // Right Shift закрыть (если открыт) — DIK_RSHIFT = 54
+    // Right Shift закрыть, если открыт (DIK_RSHIFT = 54)
     if (_key isEqualTo 54) exitWith {
       if (uiNamespace getVariable ["AQPH_open", false]) then {
         [] spawn AQPH_fnc_hide;
