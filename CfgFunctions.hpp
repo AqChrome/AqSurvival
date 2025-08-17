@@ -11,7 +11,7 @@ class AQ {
 	class AQTB {
 	tag = "AQTB";
 		class Tablet {
-			file = "aq_tablet\\functions";
+			file = "aq_tablet\functions";
 			class init {};
 			class registerAction {};
 			class open {};
