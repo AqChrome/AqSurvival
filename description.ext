@@ -35,21 +35,6 @@ class CfgSettings {
     };
 };
 
-class CfgFunctions {
-    class AQ {
-    tag = "AQ";
-    class Needs {
-        file = "core\survival\needs\inventory";
-        class onInventoryDblClick {};
-        class tryEat {};
-        class tryDrink {};
-    };
-    };
-
-    #define HALs_DEF_FUNCTIONS
-    #include "core\economy\HALs\Addons\main\config.hpp"
-    #undef HALs_DEF_FUNCTIONS
-};
 #define HALs_DEF_INIT
 #include "core\economy\HALs\Addons\main\config.hpp"
 #undef HALs_DEF_INIT

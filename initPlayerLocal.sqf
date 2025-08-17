@@ -1,3 +1,5 @@
+[] call AQTB_fnc_init;
+
 player addEventHandler ["InventoryOpened", {
     [{
         !(isNull (findDisplay 602))
