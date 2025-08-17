@@ -11,3 +11,11 @@ player addEventHandler ["InventoryOpened", {
         } forEach [633, 638, 619];
     }] call CBA_fnc_waitUntilAndExecute;
 }];
+
+if (isNil { missionNamespace getVariable "AQPH_Mails" }) then {
+  missionNamespace setVariable ["AQPH_Mails", [
+    ["HQ", "Новая задача", "Группа «Альфа», выдвигайтесь к точке БРАВО. Дальнейшие инструкции получите на месте."],
+    ["HQ", "Пополнение", "Боеприпасы доставлены на склад. Заберите в любой момент."],
+    ["Оператор", "Фотоцели", "См. вложение. Цели помечены маркерами. Действовать скрытно."]
+  ]];
+};

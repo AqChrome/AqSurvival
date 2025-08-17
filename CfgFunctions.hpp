@@ -23,7 +23,10 @@ class AQPH {
       class buildUI {};
       class tickClock {};     // NEW
       class openMail {};   // NEW
-      class home {}; 
+      class mailRenderList {};  // Отрисовать список писем
+      class mailOpenMessage {}; // Открыть конкретное письмо
+      class mailDelete {};      // Удалить письмо
+      class home {};            // Назад на рабочий стол
     };
 };
 
