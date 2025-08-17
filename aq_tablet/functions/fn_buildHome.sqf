@@ -10,7 +10,7 @@ private _h = safeZoneH;
 
 // Обои
 private _bg = _disp ctrlCreate ["RscPicture", -1];
-_bg ctrlSetText "aq_tablet\\ui\\tablet_wallpaper_ca.paa";
+_bg ctrlSetText "aq_tablet\ui\tablet_wallpaper_ca.paa";
 _bg ctrlSetPosition [_x, _y, _w, _h];
 _bg ctrlCommit 0;
 
@@ -27,14 +27,14 @@ private _pad = 0.02 * _w;
 private _rowY = _y + 0.20 * _h;
 
 private _btnTasks = _disp ctrlCreate ["RscActivePicture", -1];
-_btnTasks ctrlSetText "aq_tablet\\ui\\icon_tasks_ca.paa";
+_btnTasks ctrlSetText "aq_tablet\ui\icon_tasks_ca.paa";
 _btnTasks ctrlSetTooltip "Tasks";
 _btnTasks ctrlSetPosition [_x + _pad, _rowY, _iconSize, _iconSize];
 _btnTasks ctrlCommit 0;
 _btnTasks ctrlAddEventHandler ["ButtonClick", { ["tasks"] call AQTB_fnc_onHomeClick }];
 
 private _btnMap = _disp ctrlCreate ["RscActivePicture", -1];
-_btnMap ctrlSetText "aq_tablet\\ui\\icon_map_ca.paa";
+_btnMap ctrlSetText "aq_tablet\ui\icon_map_ca.paa";
 _btnMap ctrlSetTooltip "Map";
 _btnMap ctrlSetPosition [_x + _pad*2 + _iconSize, _rowY, _iconSize, _iconSize];
 _btnMap ctrlCommit 0;
@@ -42,17 +42,17 @@ _btnMap ctrlAddEventHandler ["ButtonClick", { ["map"] call AQTB_fnc_onHomeClick 
 
 // Тень, рамка, блик
 private _shadow = _disp ctrlCreate ["RscPicture", -1];
-_shadow ctrlSetText "aq_tablet\\ui\\tablet_shadow_ca.paa";
+_shadow ctrlSetText "aq_tablet\ui\tablet_shadow_ca.paa";
 _shadow ctrlSetPosition [_x, _y, _w, _h];
 _shadow ctrlCommit 0; _shadow ctrlEnable false;
 
 private _frame = _disp ctrlCreate ["RscPicture", -1];
-_frame ctrlSetText "aq_tablet\\ui\\tablet_frame_land_ca.paa";
+_frame ctrlSetText "aq_tablet\ui\tablet_frame_land_ca.paa";
 _frame ctrlSetPosition [_x, _y, _w, _h];
 _frame ctrlCommit 0; _frame ctrlEnable false;
 
 private _glare = _disp ctrlCreate ["RscPicture", -1];
-_glare ctrlSetText "aq_tablet\\ui\\tablet_glare_ca.paa";
+_glare ctrlSetText "aq_tablet\ui\tablet_glare_ca.paa";
 _glare ctrlSetPosition [_x, _y, _w, _h];
 _glare ctrlSetFade 0.2;
 _glare ctrlCommit 0; _glare ctrlEnable false;

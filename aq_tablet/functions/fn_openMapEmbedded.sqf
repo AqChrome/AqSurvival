@@ -22,7 +22,7 @@ uiNamespace setVariable ["AQTB_CurrentView", _grp];
 
 // Фон (не обязателен)
 private _bg = _disp ctrlCreate ["RscPicture", -1, _grp];
-_bg ctrlSetText "aq_tablet\\ui\\tasks_bg_ca.paa";
+_bg ctrlSetText "aq_tablet\ui\tasks_bg_ca.paa";
 _bg ctrlSetPosition [0, 0, _gw, _gh];
 _bg ctrlCommit 0;
 
