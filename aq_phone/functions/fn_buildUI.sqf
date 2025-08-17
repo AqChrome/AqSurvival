@@ -5,6 +5,7 @@ if (isNull _disp) exitWith { controlNull };
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // === ГЕОМЕТРИЯ ===
 private _rightPad  = 0.08 * safeZoneW;
 private _bottomPad = 0.02 * safeZoneH;
@@ -14,6 +15,8 @@ private _phoneH    = _phoneW * _aspect;
 =======
 =======
 >>>>>>> parent of 26e0510 (hot fix KPK)
+=======
+>>>>>>> parent of 26e0510 (hot fix KPK)
 // --- Геометрия телефона (твои текущие числа) ---
 private _rightPad  = 0.08 * safeZoneW;    // отступ справа
 private _bottomPad = 0.02 * safeZoneH;    // отступ снизу
@@ -21,6 +24,9 @@ private _phoneW = 0.181 * safeZoneW;      // ширина телефона
 private _aspect = 2.2;                    // ВЫСОТА/ШИРИНА (твоя текстура)
 private _phoneH = _phoneW * _aspect;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 26e0510 (hot fix KPK)
+=======
 >>>>>>> parent of 26e0510 (hot fix KPK)
 =======
 >>>>>>> parent of 26e0510 (hot fix KPK)
@@ -38,6 +44,7 @@ _y      = round (_y      / _pxH) * _pxH;
 _phoneW = round (_phoneW / _pxW) * _pxW;
 _phoneH = round (_phoneH / _pxH) * _pxH;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // контейнер
@@ -80,11 +87,24 @@ private _bleedH = -0.5 * _pxH;
 
 // Тень
 >>>>>>> parent of 26e0510 (hot fix KPK)
+=======
+// Контейнер
+private _grp = _disp ctrlCreate ["RscControlsGroup", -1];
+_grp ctrlSetPosition [_x, _y, _phoneW, _phoneH];
+_grp ctrlCommit 0;
+
+// Overscan: расширим картинки на 2 пикселя по всем сторонам
+private _bleedW = -0.5 * _pxW;
+private _bleedH = -0.5 * _pxH;
+
+// Тень
+>>>>>>> parent of 26e0510 (hot fix KPK)
 private _shadow = _disp ctrlCreate ["RscPicture", -1, _grp];
 _shadow ctrlSetText "aq_phone\ui\phone_shadow_ca.paa";
 _shadow ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
 _shadow ctrlCommit 0; _shadow ctrlEnable false;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 private _off = _disp ctrlCreate ["RscPicture", -1, _grp];
@@ -163,6 +183,15 @@ _bg ctrlCommit 0;
 
 // Рамка
 >>>>>>> parent of 26e0510 (hot fix KPK)
+=======
+// Обои
+private _bg = _disp ctrlCreate ["RscPicture", -1, _grp];
+_bg ctrlSetText "aq_phone\ui\phone_wallpaper_blue_ca.paa";
+_bg ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
+_bg ctrlCommit 0;
+
+// Рамка
+>>>>>>> parent of 26e0510 (hot fix KPK)
 private _frame = _disp ctrlCreate ["RscPicture", -1, _grp];
 _frame ctrlSetText "aq_phone\ui\phone_frame_black_ca.paa";
 _frame ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
@@ -170,7 +199,11 @@ _frame ctrlCommit 0; _frame ctrlEnable false;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // БЛИК (верхний декоративный слой)
+=======
+// Блик
+>>>>>>> parent of 26e0510 (hot fix KPK)
 =======
 // Блик
 >>>>>>> parent of 26e0510 (hot fix KPK)
@@ -185,6 +218,7 @@ _glare ctrlCommit 0; _glare ctrlEnable false;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // СТЕЙТ
 uiNamespace setVariable ["AQPH_Group", _grp];
 uiNamespace setVariable ["AQPH_OffWallpaper", _off];
@@ -197,6 +231,9 @@ uiNamespace setVariable ["AQPH_IconMailBtn", _btnMail];
 // HOME widgets: будут показываться/прятаться вместе
 uiNamespace setVariable ["AQPH_HomeWidgets", [_home, _time, _icoMail, _btnMail]];
 uiNamespace setVariable ["AQPH_Controls", [_shadow, _off, _home, _time, _icoMail, _btnMail, _frame, _glare]];
+=======
+uiNamespace setVariable ["AQPH_Controls", [_shadow, _bg, _frame, _glare]];
+>>>>>>> parent of 26e0510 (hot fix KPK)
 =======
 uiNamespace setVariable ["AQPH_Controls", [_shadow, _bg, _frame, _glare]];
 >>>>>>> parent of 26e0510 (hot fix KPK)
