@@ -35,6 +35,11 @@ class CfgSettings {
     };
 };
 
+class CfgFunctions {
+  #include "CfgFunctions.hpp"   // внутри .hpp не должно быть ещё одного class CfgFunctions
+};
+
+
 #define HALs_DEF_INIT
 #include "core\economy\HALs\Addons\main\config.hpp"
 #undef HALs_DEF_INIT
