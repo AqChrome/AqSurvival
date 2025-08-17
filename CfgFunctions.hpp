@@ -21,6 +21,9 @@ class AQPH {
       class show {};
       class hide {};
       class buildUI {};
+      class tickClock {};     // NEW
+      class openMail {};   // NEW
+      class home {}; 
     };
 };
 
