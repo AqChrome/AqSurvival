@@ -37,7 +37,7 @@ private _bleedPx = -0.5;
 private _bleedW = _bleedPx * _pxW;
 private _bleedH = _bleedPx * _pxH;
 
-// СЛОИ: тень → OFF (синий) → HOME (раб. стол) → [часы] → рамка → блик
+// СЛОИ: тень → OFF (синий) → HOME (раб. стол) → [часы] → ИКОНКА ПОЧТЫ → рамка → блик
 private _shadow = _disp ctrlCreate ["RscPicture", -1, _grp];
 _shadow ctrlSetText "aq_phone\ui\phone_shadow_ca.paa";
 _shadow ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
@@ -61,7 +61,7 @@ _home ctrlCommit 0;
 // <--- ТУТ РАЗМЕТКА часов
 private _clockXFrac = 0.62;  // от 0.00 (лево) до 1.00 (право)
 private _clockWFrac = 0.25;  // доля ширины, отведённая под часы
-private _clockYOff  = 0.155;  // доля высоты телефона от верхнего края
+private _clockYOff  = 0.155; // доля высоты телефона от верхнего края
 private _clockSize  = 0.90;  // размер шрифта
 
 private _barH = 0.085 * _phoneH;                // высота «статус-бара» на твоём арте
@@ -75,24 +75,14 @@ _time ctrlSetBackgroundColor [0,0,0,0];
 _time ctrlSetFade 1;  // скрыт пока OFF-экран
 _time ctrlCommit 0;
 
-private _frame = _disp ctrlCreate ["RscPicture", -1, _grp];
-_frame ctrlSetText "aq_phone\ui\phone_frame_black_ca.paa";
-_frame ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
-_frame ctrlCommit 0; _frame ctrlEnable false;
-
-private _glare = _disp ctrlCreate ["RscPicture", -1, _grp];
-_glare ctrlSetText "aq_phone\ui\phone_glare_ca.paa";
-_glare ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
-_glare ctrlSetFade 0.15;
-_glare ctrlCommit 0; _glare ctrlEnable false;
-
-// --- ИКОНКА "ПОЧТА" НА РАБОЧЕМ СТОЛЕ (подгоняй тут) ---
+// --- ИКОНКА "ПОЧТА" НА РАБОЧЕМ СТОЛЕ (между HOME и FRAME/GLARE) ---
 private _iconSize = 0.20 * _phoneW;
 private _iconX    = 0.16 * _phoneW;
 private _iconY    = _barH + 0.135 * _phoneH;
 
 private _icoMail = _disp ctrlCreate ["RscPicture", -1, _grp];
 _icoMail ctrlSetText "aq_phone\ui\icon_mail_ca.paa";
+_icoMail ctrlSetTextColor [1,1,1,1];  // фикс: не «красить» текстуру
 _icoMail ctrlSetPosition [_iconX, _iconY, _iconSize, _iconSize];
 _icoMail ctrlSetFade 1;   // синхронно с домашним столом
 _icoMail ctrlCommit 0;
@@ -104,6 +94,19 @@ _btnMail ctrlSetPosition [_iconX, _iconY, _iconSize, _iconSize];
 _btnMail ctrlSetFade 1;
 _btnMail ctrlCommit 0;
 _btnMail ctrlAddEventHandler ["ButtonClick", { [] call AQPH_fnc_openMail }];
+
+// РАМКА (над всеми внутренними элементами)
+private _frame = _disp ctrlCreate ["RscPicture", -1, _grp];
+_frame ctrlSetText "aq_phone\ui\phone_frame_black_ca.paa";
+_frame ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
+_frame ctrlCommit 0; _frame ctrlEnable false;
+
+// БЛИК (самый верхний декоративный слой)
+private _glare = _disp ctrlCreate ["RscPicture", -1, _grp];
+_glare ctrlSetText "aq_phone\ui\phone_glare_ca.paa";
+_glare ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
+_glare ctrlSetFade 0.15;
+_glare ctrlCommit 0; _glare ctrlEnable false;
 
 // ССЫЛКИ/СТЕЙТ
 uiNamespace setVariable ["AQPH_Group", _grp];
