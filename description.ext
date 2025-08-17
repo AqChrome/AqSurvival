@@ -22,16 +22,6 @@ class CfgPatches {
     };
 };
 
-class AQTB_Dialog {
-  idd = 77001;
-  movingEnable = 0;
-  enableSimulation = 1;
-  onLoad   = "uiNamespace setVariable ['AQTB_Display', _this select 0]";
-  onUnload = "uiNamespace setVariable ['AQTB_Display', displayNull]";
-  class controls {};
-  class controlsBackground {};
-};
-
 class CfgSettings {
     class CBA {
         class Versioning {
