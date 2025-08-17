@@ -2,47 +2,65 @@ disableSerialization;
 
 private _disp     = uiNamespace getVariable ["AQPH_Display", displayNull];
 private _app      = uiNamespace getVariable ["AQPH_AppGroup", controlNull];
+if (isNull _disp || {isNull _app}) exitWith {};
+
+// гарантируем наличие фиксированной области списка
 private _listArea = uiNamespace getVariable ["AQPH_ListArea", controlNull];
-if (isNull _disp || {isNull _app} || {isNull _listArea}) exitWith {};
+if (isNull _listArea) then {
+  private _ap = ctrlPosition _app;
+  private _aw = _ap#2; private _ah = _ap#3;
 
-// гарантированно уберём прошлый экран письма (чтобы он не перекрывал верхние строки)
-private _msgView = uiNamespace getVariable ["AQPH_MailViewGroup", controlNull];
-if (!isNull _msgView) then { ctrlDelete _msgView; uiNamespace setVariable ["AQPH_MailViewGroup", controlNull]; };
+  private _padSide = 0.05 * _aw;
+  private _padTop  = 0.05 * _ah;
+  private _padBot  = 0.10 * _ah;
+  private _footerH = 0.07 * _ah;
 
-// подчистим ТОЛЬКО содержимое области списка
+  _listArea = _disp ctrlCreate ["RscControlsGroupNoScrollbars", -1, _app];
+  _listArea ctrlSetPosition [_padSide, _padTop, _aw - 2*_padSide, _ah - _padTop - _padBot - _footerH];
+  _listArea ctrlCommit 0;
+  uiNamespace setVariable ["AQPH_ListArea", _listArea];
+};
+
+// подчистим содержимое _listArea
 { ctrlDelete _x } forEach (allControls _listArea);
 
-// габариты зоны списка
+// габариты видимой области списка
 private _lp = ctrlPosition _listArea;
 private _lw = _lp#2;
 private _lh = _lp#3;
-if (_lh <= 0.001) exitWith {};
+if (_lh <= 0.001) exitWith {
+  private _warn = _disp ctrlCreate ["RscStructuredText", -1, _app];
+  _warn ctrlSetPosition [ 0, 0, _lw, 0.08*_lh max 0.06 ];
+  _warn ctrlSetBackgroundColor [0,0,0,0];
+  _warn ctrlSetStructuredText parseText "<t size='0.9' color='#FF4444'>[Mail] Высота зоны списка = 0. Уменьши _padTop/_padBot/_footerH.</t>";
+  _warn ctrlCommit 0;
+};
 
 // ===== LAYOUT =====
-private _headerH    = 0.10 * _lh;     // высота шапки "Мессенджер"
-private _headerGap  = 0.015 * _lh;    // зазор под шапкой
+private _headerH    = 0.10 * _lh;    // высота шапки "Мессенджер"
+private _headerGap  = 0.015 * _lh;   // зазор под шапкой
 
-private _gap        = 0.02 * _lh;     // промежуток между мини-баблами
-private _bW         = _lw;            // ширина мини-бабла
-private _bH         = 0.14 * _lh;     // высота мини-бабла
+private _gap        = 0.02 * _lh;    // промежуток между мини-баблами
+private _bW         = _lw;           // ширина мини-бабла
+private _bH         = 0.14 * _lh;    // высота мини-бабла
 private _bTextSize  = 0.90;
 
-// позиция текста внутри мини-бабла (фракции от _bW/_bH)
+// текст внутри мини-бабла (фракции от _bW/_bH)
 private _textXFrac  = 0.06;
 private _textYFrac  = 0.25;
 private _textWFrac  = 0.90;
 private _textHFrac  = 0.50;
 // ===================
 
-// шапка (НЕ скроллится и НЕ ловит мышь)
+// шапка «Мессенджер» (НЕ скроллится, не перехватывает мышь)
 private _hdr = _disp ctrlCreate ["RscStructuredText", -1, _listArea];
 _hdr ctrlSetPosition [0, 0, _lw, _headerH];
 _hdr ctrlSetBackgroundColor [0,0,0,0];
 _hdr ctrlSetStructuredText parseText "<t align='center' size='1.0' color='#111111'>Мессенджер</t>";
-_hdr ctrlEnable false;
+_hdr ctrlEnable false;  // <-- важно: шапка не ловит мышь
 _hdr ctrlCommit 0;
 
-// скролл со строками (прокручиваются только баблы)
+// скролл со строками
 private _scrollY = _headerH + _headerGap;
 private _scrollH = (_lh - _scrollY) max 0.001;
 
@@ -68,7 +86,7 @@ for "_i" from 0 to ((count _mails) - 1) do {
   private _mail = _mails select _i;   // [from, subject, body]
   _mail params ["_from","_subject","_body"];
 
-  // тема (обрезка по длине)
+  // тема с обрезкой по длине
   private _maxChars = 42;
   private _subjShort = _subject;
   if ((count toArray _subjShort) > _maxChars) then {
@@ -101,11 +119,11 @@ for "_i" from 0 to ((count _mails) - 1) do {
   ];
   _label ctrlCommit 0;
 
-  // 3) КНОПКА (создаём ПОСЛЕДНЕЙ и в тех же координатах, что фон)
+  // 3) КНОПКА — последней и в тех же координатах, что фон (чтобы точно кликалось)
   private _btn = _disp ctrlCreate ["RscButton", -1, _scroll];
   _btn ctrlSetText "";
   _btn ctrlSetBackgroundColor [0,0,0,0];
-  _btn ctrlSetPosition [0, _y, _bW, _bH];   // ВАЖНО: Y = _y, W/H = _bW/_bH
+  _btn ctrlSetPosition [0, _y, _bW, _bH];
   _btn ctrlCommit 0;
   _btn ctrlAddEventHandler ["ButtonClick", format ["[%1] call AQPH_fnc_mailOpenMessage;", _i]];
 
