@@ -5,6 +5,9 @@ if (isNull _disp) exitWith { controlNull };
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of a9997c0 (Фак)
 // === ГЕОМЕТРИЯ ===
 private _rightPad  = 0.08 * safeZoneW;
 private _bottomPad = 0.02 * safeZoneH;
@@ -40,6 +43,9 @@ _phoneH = round (_phoneH / _pxH) * _pxH;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of a9997c0 (Фак)
 // контейнер
 private _grpClass = if (isClass (configFile >> "RscControlsGroupNoScrollbars")) then {
   "RscControlsGroupNoScrollbars"
@@ -56,6 +62,7 @@ private _bleedW = _bleedPx * _pxW;
 private _bleedH = _bleedPx * _pxH;
 
 // СЛОИ: тень → OFF → HOME → часы → ИКОНКА → рамка → блик
+<<<<<<< HEAD
 =======
 // Контейнер
 private _grp = _disp ctrlCreate ["RscControlsGroup", -1];
@@ -80,6 +87,8 @@ private _bleedH = -0.5 * _pxH;
 
 // Тень
 >>>>>>> parent of 26e0510 (hot fix KPK)
+=======
+>>>>>>> parent of a9997c0 (Фак)
 private _shadow = _disp ctrlCreate ["RscPicture", -1, _grp];
 _shadow ctrlSetText "aq_phone\ui\phone_shadow_ca.paa";
 _shadow ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
@@ -145,6 +154,7 @@ _btnMail ctrlCommit 0;
 _btnMail ctrlAddEventHandler ["ButtonClick", { [] call AQPH_fnc_openMail }];
 
 // РАМКА (над внутренними элементами)
+<<<<<<< HEAD
 =======
 // Обои
 private _bg = _disp ctrlCreate ["RscPicture", -1, _grp];
@@ -163,11 +173,14 @@ _bg ctrlCommit 0;
 
 // Рамка
 >>>>>>> parent of 26e0510 (hot fix KPK)
+=======
+>>>>>>> parent of a9997c0 (Фак)
 private _frame = _disp ctrlCreate ["RscPicture", -1, _grp];
 _frame ctrlSetText "aq_phone\ui\phone_frame_black_ca.paa";
 _frame ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
 _frame ctrlCommit 0; _frame ctrlEnable false;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // БЛИК (верхний декоративный слой)
@@ -177,6 +190,9 @@ _frame ctrlCommit 0; _frame ctrlEnable false;
 =======
 // Блик
 >>>>>>> parent of 26e0510 (hot fix KPK)
+=======
+// БЛИК (верхний декоративный слой)
+>>>>>>> parent of a9997c0 (Фак)
 private _glare = _disp ctrlCreate ["RscPicture", -1, _grp];
 _glare ctrlSetText "aq_phone\ui\phone_glare_ca.paa";
 _glare ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
