@@ -8,20 +8,37 @@ private _y = safeZoneY;
 private _w = safeZoneW;
 private _h = safeZoneH;
 
-// Обои
+// 1) Фон (обои)
 private _bg = _disp ctrlCreate ["RscPicture", -1];
 _bg ctrlSetText "aq_tablet\ui\tablet_wallpaper_ca.paa";
 _bg ctrlSetPosition [_x, _y, _w, _h];
 _bg ctrlCommit 0;
 
-// Заголовок
+// 2) Рамка/тень/блик — СОЗДАЁМ РАНЬШЕ (они будут НИЖЕ по Z-слою)
+private _shadow = _disp ctrlCreate ["RscPicture", -1];
+_shadow ctrlSetText "aq_tablet\ui\tablet_shadow_ca.paa";
+_shadow ctrlSetPosition [_x, _y, _w, _h];
+_shadow ctrlCommit 0; _shadow ctrlEnable false;
+
+private _frame = _disp ctrlCreate ["RscPicture", -1];
+_frame ctrlSetText "aq_tablet\ui\tablet_frame_land_ca.paa";
+_frame ctrlSetPosition [_x, _y, _w, _h];
+_frame ctrlCommit 0; _frame ctrlEnable false;
+
+private _glare = _disp ctrlCreate ["RscPicture", -1];
+_glare ctrlSetText "aq_tablet\ui\tablet_glare_ca.paa";
+_glare ctrlSetPosition [_x, _y, _w, _h];
+_glare ctrlSetFade 0.2;
+_glare ctrlCommit 0; _glare ctrlEnable false;
+
+// 3) Заголовок (уже ПОСЛЕ рамки => интерактивен и «над стеклом»)
 private _title = _disp ctrlCreate ["RscStructuredText", -1];
 _title ctrlSetPosition [_x + 0.02*_w, _y + 0.02*_h, 0.30*_w, 0.06*_h];
 _title ctrlSetStructuredText parseText "<t size='1.2' color='#FFFFFF'>AQ Tablet</t>";
 _title ctrlSetBackgroundColor [0,0,0,0.30];
 _title ctrlCommit 0;
 
-// Иконки
+// 4) Иконки приложений (над рамкой, кликабельные)
 private _iconSize = 0.12 * _w;
 private _pad = 0.02 * _w;
 private _rowY = _y + 0.20 * _h;
@@ -40,22 +57,12 @@ _btnMap ctrlSetPosition [_x + _pad*2 + _iconSize, _rowY, _iconSize, _iconSize];
 _btnMap ctrlCommit 0;
 _btnMap ctrlAddEventHandler ["ButtonClick", { ["map"] call AQTB_fnc_onHomeClick }];
 
-// Тень, рамка, блик
-private _shadow = _disp ctrlCreate ["RscPicture", -1];
-_shadow ctrlSetText "aq_tablet\ui\tablet_shadow_ca.paa";
-_shadow ctrlSetPosition [_x, _y, _w, _h];
-_shadow ctrlCommit 0; _shadow ctrlEnable false;
+// 5) Кнопка «×» (всегда сверху)
+private _btnClose = _disp ctrlCreate ["RscButton", -1];
+_btnClose ctrlSetText "×";
+_btnClose ctrlSetPosition [_x + _w - 0.06*_w, _y + 0.02*_h, 0.04*_w, 0.05*_h];
+_btnClose ctrlCommit 0;
+_btnClose ctrlAddEventHandler ["ButtonClick", { [] call AQTB_fnc_close }];
 
-private _frame = _disp ctrlCreate ["RscPicture", -1];
-_frame ctrlSetText "aq_tablet\ui\tablet_frame_land_ca.paa";
-_frame ctrlSetPosition [_x, _y, _w, _h];
-_frame ctrlCommit 0; _frame ctrlEnable false;
-
-private _glare = _disp ctrlCreate ["RscPicture", -1];
-_glare ctrlSetText "aq_tablet\ui\tablet_glare_ca.paa";
-_glare ctrlSetPosition [_x, _y, _w, _h];
-_glare ctrlSetFade 0.2;
-_glare ctrlCommit 0; _glare ctrlEnable false;
-
-// Сохраняем
-uiNamespace setVariable ["AQTB_HomeCtrls", [_bg, _title, _btnTasks, _btnMap, _shadow, _frame, _glare]];
+// 6) Сохраняем список, чтобы скрывать при входе в подэкраны
+uiNamespace setVariable ["AQTB_HomeCtrls", [_bg, _shadow, _frame, _glare, _title, _btnTasks, _btnMap, _btnClose]];
