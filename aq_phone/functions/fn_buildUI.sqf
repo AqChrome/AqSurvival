@@ -7,6 +7,7 @@ if (isNull _disp) exitWith { controlNull };
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of a9997c0 (Фак)
 // === ГЕОМЕТРИЯ ===
@@ -17,6 +18,13 @@ private _rightPad  = 0.08 * safeZoneW;
 private _bottomPad = 0.02 * safeZoneH;
 private _phoneW    = 0.181 * safeZoneW;
 private _aspect    = 2.2;                 // высота/ширина твоих спрайтов
+=======
+// === ГЕОМЕТРИЯ ===
+private _rightPad  = 0.08 * safeZoneW;
+private _bottomPad = 0.02 * safeZoneH;
+private _phoneW    = 0.181 * safeZoneW;
+private _aspect    = 2.2;                 // H/W твоих спрайтов
+>>>>>>> parent of a9997c0 (Фак)
 private _phoneH    = _phoneW * _aspect;
 =======
 =======
@@ -49,12 +57,16 @@ _phoneH = round (_phoneH / _pxH) * _pxH;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of a9997c0 (Фак)
 // контейнер
 =======
 // контейнер (без скроллов, если класс есть)
 >>>>>>> parent of 9ea0e42 (2)
+=======
+// контейнер
+>>>>>>> parent of a9997c0 (Фак)
 private _grpClass = if (isClass (configFile >> "RscControlsGroupNoScrollbars")) then {
   "RscControlsGroupNoScrollbars"
 } else {
@@ -64,11 +76,16 @@ private _grp = _disp ctrlCreate [_grpClass, -1];
 _grp ctrlSetPosition [_x, _y, _phoneW, _phoneH];
 _grp ctrlCommit 0;
 
+<<<<<<< HEAD
 // отрицательный bleed = -0.5 px внутрь (как ты сделал)
+=======
+// negative bleed (-0.5 px внутрь)
+>>>>>>> parent of a9997c0 (Фак)
 private _bleedPx = -0.5;
 private _bleedW = _bleedPx * _pxW;
 private _bleedH = _bleedPx * _pxH;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // СЛОИ: тень → OFF → HOME → часы → ИКОНКА → рамка → блик
 <<<<<<< HEAD
@@ -101,6 +118,9 @@ private _bleedH = -0.5 * _pxH;
 =======
 // СЛОИ: тень → OFF (синий) → HOME (раб. стол) → [часы] → ИКОНКА ПОЧТЫ → рамка → блик
 >>>>>>> parent of 9ea0e42 (2)
+=======
+// СЛОИ: тень → OFF → HOME → часы → ИКОНКА → рамка → блик
+>>>>>>> parent of a9997c0 (Фак)
 private _shadow = _disp ctrlCreate ["RscPicture", -1, _grp];
 _shadow ctrlSetText "aq_phone\ui\phone_shadow_ca.paa";
 _shadow ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
@@ -122,6 +142,7 @@ _off ctrlCommit 0;
 private _home = _disp ctrlCreate ["RscPicture", -1, _grp];
 _home ctrlSetText "aq_phone\ui\phone_home_ca.paa";
 _home ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
+<<<<<<< HEAD
 _home ctrlSetFade 1;  // появится после выезда
 _home ctrlCommit 0;
 
@@ -133,6 +154,18 @@ private _clockYOff  = 0.155; // доля высоты телефона от ве
 private _clockSize  = 0.90;  // размер шрифта
 
 private _barH = 0.085 * _phoneH;                // высота «статус-бара» на твоём арте
+=======
+_home ctrlSetFade 1;
+_home ctrlCommit 0;
+
+// ЧАСЫ
+private _clockXFrac = 0.62;
+private _clockWFrac = 0.25;
+private _clockYOff  = 0.155;
+private _clockSize  = 0.90;
+
+private _barH = 0.085 * _phoneH;
+>>>>>>> parent of a9997c0 (Фак)
 private _time = _disp ctrlCreate ["RscStructuredText", -1, _grp];
 private _clockX = _clockXFrac * _phoneW;
 private _clockW = _clockWFrac * _phoneW;
@@ -149,8 +182,21 @@ private _iconX    = 0.16 * _phoneW;
 private _iconY    = _barH + 0.135 * _phoneH;
 
 private _icoMail = _disp ctrlCreate ["RscPicture", -1, _grp];
+<<<<<<< HEAD
 _icoMail ctrlSetText "aq_phone\ui\icon_mail_ca.paa";
 _icoMail ctrlSetTextColor [1,1,1,1];  // фикс: не «красить» текстуру
+=======
+
+// если файл иконки по пути отсутствует — подставим дефолт, чтобы не было «бежевого квадрата»
+private _iconPath = "aq_phone\ui\icon_mail_ca.paa";
+if !(fileExists _iconPath) then {
+  _iconPath = "a3\ui_f\data\IGUI\Cfg\Actions\gear_ca.paa"; // fallback
+};
+
+_icoMail ctrlSetText _iconPath;
+_icoMail ctrlSetTextColor [1,1,1,1];           // гарантируем отсутствие «подкраса»
+_icoMail ctrlSetBackgroundColor [0,0,0,0];
+>>>>>>> parent of a9997c0 (Фак)
 _icoMail ctrlSetPosition [_iconX, _iconY, _iconSize, _iconSize];
 _icoMail ctrlSetFade 1;   // синхронно с домашним столом
 _icoMail ctrlCommit 0;
@@ -163,6 +209,7 @@ _btnMail ctrlSetFade 1;
 _btnMail ctrlCommit 0;
 _btnMail ctrlAddEventHandler ["ButtonClick", { [] call AQPH_fnc_openMail }];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // РАМКА (над внутренними элементами)
 <<<<<<< HEAD
@@ -189,11 +236,15 @@ _bg ctrlCommit 0;
 =======
 // РАМКА (над всеми внутренними элементами)
 >>>>>>> parent of 9ea0e42 (2)
+=======
+// РАМКА (над внутренними элементами)
+>>>>>>> parent of a9997c0 (Фак)
 private _frame = _disp ctrlCreate ["RscPicture", -1, _grp];
 _frame ctrlSetText "aq_phone\ui\phone_frame_black_ca.paa";
 _frame ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
 _frame ctrlCommit 0; _frame ctrlEnable false;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,6 +262,9 @@ _frame ctrlCommit 0; _frame ctrlEnable false;
 =======
 // БЛИК (самый верхний декоративный слой)
 >>>>>>> parent of 9ea0e42 (2)
+=======
+// БЛИК (верхний декоративный слой)
+>>>>>>> parent of a9997c0 (Фак)
 private _glare = _disp ctrlCreate ["RscPicture", -1, _grp];
 _glare ctrlSetText "aq_phone\ui\phone_glare_ca.paa";
 _glare ctrlSetPosition [-_bleedW, -_bleedH, _phoneW + 2*_bleedW, _phoneH + 2*_bleedH];
@@ -232,7 +286,11 @@ uiNamespace setVariable ["AQPH_BarH", _barH];
 uiNamespace setVariable ["AQPH_IconMail", _icoMail];
 uiNamespace setVariable ["AQPH_IconMailBtn", _btnMail];
 
+<<<<<<< HEAD
 // все элементы домашнего стола (чтобы fade делать разом): фон, часы, иконка, кнопка
+=======
+// HOME widgets: будут показываться/прятаться вместе
+>>>>>>> parent of a9997c0 (Фак)
 uiNamespace setVariable ["AQPH_HomeWidgets", [_home, _time, _icoMail, _btnMail]];
 uiNamespace setVariable ["AQPH_Controls", [_shadow, _off, _home, _time, _icoMail, _btnMail, _frame, _glare]];
 =======
