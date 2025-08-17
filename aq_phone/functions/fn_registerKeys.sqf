@@ -16,7 +16,7 @@
     // Right Shift закрыть (если открыт) — DIK_RSHIFT = 54
     if (_key isEqualTo 54) exitWith {
       if (uiNamespace getVariable ["AQPH_open", false]) then {
-        [] call AQPH_fnc_hide;
+        [] spawn AQPH_fnc_hide;
         true
       } else { false };
     };

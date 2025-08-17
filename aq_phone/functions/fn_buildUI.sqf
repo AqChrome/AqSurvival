@@ -4,11 +4,12 @@ private _disp = uiNamespace getVariable ["AQPH_Display", displayNull];
 if (isNull _disp) exitWith { controlNull };
 
 // Геометрия телефона
-private _rightPad = 0.02 * safeZoneW;     // отступ справа
+private _rightPad = 0.08 * safeZoneW;     // отступ справа
 private _bottomPad = 0.02 * safeZoneH;    // отступ снизу
-private _phoneW = 0.28 * safeZoneW;       // ширина смартфона
-private _phoneH = _phoneW * 1.85;         // соотношение сторон ~ 19:10
-_phoneH = _phoneH min (0.88 * safeZoneH); // защитный предел по высоте
+private _phoneW = 0.181 * safeZoneW;
+private _aspect = 2.2;                     // высота/ширина картинки
+private _phoneH = _phoneW * _aspect;
+_phoneH = _phoneH min (0.88 * safeZoneH);
 
 private _x = safeZoneX + safeZoneW - _rightPad - _phoneW;
 private _y = safeZoneY + safeZoneH - _bottomPad - _phoneH;

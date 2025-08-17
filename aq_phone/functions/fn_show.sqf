@@ -20,6 +20,6 @@ _grp ctrlCommit 0.35;
 // Right Shift (54) = закрыть
 _disp displayAddEventHandler ["KeyDown", {
   params ["_d","_key"];
-  if (_key isEqualTo 54) exitWith { [] call AQPH_fnc_hide; true };
+  if (_key isEqualTo 54) exitWith { [] spawn AQPH_fnc_hide; true };
   false
 }];
