@@ -109,20 +109,20 @@ private _startY = 0.045;
 
   // фон строки
   private _row = _disp ctrlCreate ["RscText", -1, _screen];
-  _row ctrlSetPosition [_padX, _startY + _i * (_rowH + 0.003), _scrW - 2*_padX - _EPS, _rowH];
+  _row ctrlSetPosition [_padX, _startY + _i * (_rowH + 0.006), _scrW - 2*_padX - _EPS, _rowH];
   _row ctrlSetBackgroundColor [0.98,0.98,0.98,1];
   _row ctrlCommit 0;
 
   // текст без тени
   private _txt = _disp ctrlCreate ["RscStructuredText", -1, _screen];
-  _txt ctrlSetPosition [_padX + 0.008, _startY + _i * (_rowH + 0.003) + 0.003, _scrW - 2*_padX - 0.016 - _EPS, _rowH - 0.006];
+  _txt ctrlSetPosition [_padX + 0.008, _startY + _i * (_rowH + 0.006) + 0.003, _scrW - 2*_padX - 0.016 - _EPS, _rowH - 0.006];
   _txt ctrlCommit 0;
   _txt ctrlSetStructuredText parseText format ["<t shadow='0' color='#0d0d0d' font='PuristaMedium' size='0.85'>%1</t>", _title];
 
   // кнопка поверх
   private _btn = _disp ctrlCreate ["RscButton", 2000 + _i, _screen];
   _btn ctrlSetText "";
-  _btn ctrlSetPosition [_padX, _startY + _i * (_rowH + 0.003), _scrW - 2*_padX - _EPS, _rowH];
+  _btn ctrlSetPosition [_padX, _startY + _i * (_rowH + 0.006), _scrW - 2*_padX - _EPS, _rowH];
   _btn ctrlSetBackgroundColor [0,0,0,0];
   _btn ctrlCommit 0;
   _btn ctrlAddEventHandler ["ButtonClick", format ["[%1] call AQPH_fnc_menuAction;", _i]];
