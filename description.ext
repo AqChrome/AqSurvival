@@ -37,22 +37,22 @@ class CfgSettings {
 
 class CfgSounds
 {
-  #include "aq_phone\sounds\config.hpp"
+  #include "PDA\sounds\config.hpp"
 };
 
 
 class CfgFunctions {
   #include "CfgFunctions.hpp"
-  #include "aq_phone\CfgFunctions.hpp" 
+  #include "PDA\CfgFunctions.hpp" 
 };
 
-class AQPH_Dialog
+class PDA_Dialog
 {
     idd = 95210;
     movingEnable = 0;
     enableSimulation = 1;
-    onLoad   = "uiNamespace setVariable ['AQPH_Display', _this select 0]";
-    onUnload = "uiNamespace setVariable ['AQPH_Display', displayNull]";
+    onLoad   = "uiNamespace setVariable ['PDA_Display', _this select 0]";
+    onUnload = "uiNamespace setVariable ['PDA_Display', displayNull]";
     class Controls {};
 };
 

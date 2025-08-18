@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=632;
+		nextID=640;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9676.3145,6.1042948,4102.3071};
-		dir[]={-0.75382668,-0.22113629,-0.61874402};
-		up[]={-0.17093016,0.97524297,-0.14030018};
-		aside[]={-0.63445121,7.4505806e-09,0.77296305};
+		pos[]={9679.7734,15.14064,4115.5732};
+		dir[]={-0.4105576,-0.78647983,-0.46140239};
+		up[]={-0.52280909,0.61761588,-0.58755541};
+		aside[]={-0.74706995,-2.9802322e-08,0.66474569};
 	};
 };
 binarizationWanted=0;
-sourceName="aqsurvival";
+sourceName="AqSurvival";
 addons[]=
 {
 	"A3_Characters_F",
@@ -60,13 +60,14 @@ addons[]=
 	"ace_grenades",
 	"kat_circulation",
 	"kat_surgery",
-	"kat_vitals"
+	"kat_vitals",
+	"rhs_c_zil131"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=29;
+		items=30;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -268,13 +269,21 @@ class AddonsMetaData
 			author="Mazinski";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
+		class Item29
+		{
+			className="rhs_c_zil131";
+			name="ZiL-131 Truck";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
 	};
 };
 dlcs[]=
 {
 	"Kart",
 	"RHS_USAF",
-	"Expansion"
+	"Expansion",
+	"RHS_AFRF"
 };
 randomSeed=15373329;
 class ScenarioData
@@ -328,7 +337,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=478;
+		items=479;
 		class Item0
 		{
 			dataType="Group";
@@ -7892,6 +7901,23 @@ class Mission
 			};
 			id=594;
 			atlOffset=-4.7683716e-07;
+		};
+		class Item478
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9669.9863,5.7043977,4112.7949};
+				angles[]={0.050623242,3.4519498,0.02666023};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=639;
+			type="rhs_zil131_vmf";
+			atlOffset=-0.002559185;
 		};
 	};
 };
