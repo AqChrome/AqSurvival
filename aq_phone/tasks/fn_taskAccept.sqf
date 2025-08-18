@@ -12,7 +12,7 @@ private _task = _tasks select _idx;
 private _tag  = _task select 4;
 
 // вызвать твой хаб
-[_tag] call AQPH_testHub;
+[_tag] call AQPH_fnc_testHub;
 
 // удалить из списка
 _tasks deleteAt _idx;
