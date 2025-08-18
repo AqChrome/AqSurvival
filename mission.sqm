@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=599;
+		nextID=632;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9672.542,5.8425388,4106.876};
-		dir[]={0.80133975,-0.21308494,0.55897176};
-		up[]={0.17476721,0.97703379,0.12190825};
-		aside[]={0.57211113,-7.4505806e-09,-0.8201763};
+		pos[]={9676.3145,6.1042948,4102.3071};
+		dir[]={-0.75382668,-0.2211363,-0.61874402};
+		up[]={-0.17093016,0.97524285,-0.14030018};
+		aside[]={-0.63445115,7.4505806e-09,0.77296299};
 	};
 };
 binarizationWanted=0;
@@ -59,13 +59,14 @@ addons[]=
 	"A3_Characters_F_Exp_Vests",
 	"ace_grenades",
 	"kat_circulation",
-	"A3_Characters_F_Enoch"
+	"kat_surgery",
+	"kat_vitals"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -255,10 +256,17 @@ class AddonsMetaData
 		};
 		class Item27
 		{
-			className="A3_Characters_F_Enoch";
-			name="Arma 3 Contact Platform - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			className="kat_surgery";
+			name="KAT - ADV Medical: Surgery";
+			author="Mazinski";
+			url="https://github.com/KAT-Advanced-Medical/KAM";
+		};
+		class Item28
+		{
+			className="kat_vitals";
+			name="KAT - ADV Medical: Vitals";
+			author="Mazinski";
+			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
 	};
 };
@@ -266,8 +274,7 @@ dlcs[]=
 {
 	"Kart",
 	"RHS_USAF",
-	"Expansion",
-	"Enoch"
+	"Expansion"
 };
 randomSeed=15373329;
 class ScenarioData
@@ -321,7 +328,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=479;
+		items=478;
 		class Item0
 		{
 			dataType="Group";
@@ -7693,7 +7700,7 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=4;
+									items=10;
 									class Item0
 									{
 										name="kat_X_AED";
@@ -7713,6 +7720,36 @@ class Mission
 									{
 										name="kat_norepinephrine";
 										count=2;
+									};
+									class Item4
+									{
+										name="ACE_adenosine";
+										count=5;
+									};
+									class Item5
+									{
+										name="kat_scalpel";
+										count=1;
+									};
+									class Item6
+									{
+										name="kat_retractor";
+										count=1;
+									};
+									class Item7
+									{
+										name="kat_clamp";
+										count=1;
+									};
+									class Item8
+									{
+										name="kat_basicDiagnostic";
+										count=1;
+									};
+									class Item9
+									{
+										name="kat_BPCuff";
+										count=1;
 									};
 								};
 							};
@@ -7855,53 +7892,6 @@ class Mission
 			};
 			id=594;
 			atlOffset=-4.7683716e-07;
-		};
-		class Item478
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={9683.8477,4.392837,4092.4136};
-						angles[]={0,2.2485843,0};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-					};
-					id=597;
-					type="O_R_recon_JTAC_F";
-					atlOffset=-1.6212463e-05;
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={9683.0156,4.389441,4090.9883};
-						angles[]={0,0.96907508,0};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=598;
-					type="O_R_recon_TL_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=596;
-			atlOffset=-1.6212463e-05;
 		};
 	};
 };

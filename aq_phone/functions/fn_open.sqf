@@ -7,8 +7,6 @@ if (isNull _disp) exitWith {};
 
 [_disp] call AQPH_fnc_buildUI;
 
-// Анимация телефона (выезд)
-playSound "AQPH_PowerOn";
 private _rootGrp = _disp displayCtrl 10;
 if (!isNull _rootGrp) then {
   private _pos = ctrlPosition _rootGrp;
@@ -18,14 +16,16 @@ if (!isNull _rootGrp) then {
   _rootGrp ctrlCommit 0.15;
 };
 
-// Чуть позже — включаем экран (после выезда)
+playSound "AQPH_PowerOn";
+
+// После выезда — включаем экран (убираем off и показываем _home)
 [] spawn {
-  uiSleep 0.37;
+  uiSleep 0.48;
   [] call AQPH_fnc_screenPowerOn;
 };
 
+// Если есть уведомления — покажем (после включения)
 [] spawn {
-  uiSleep 0.20;
+  uiSleep 0.55;
   [] call AQPH_fnc_notifyRender;
 };
-

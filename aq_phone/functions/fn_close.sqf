@@ -18,11 +18,11 @@ if (!isNull _rootGrp) then {
   [_disp, _rootGrp, _pos] spawn {
     params ["_d","_rg","_p"];
     uiSleep 0.14; // чуть больше fade экрана
-
+	
     _rg ctrlSetPosition [(_p select 0), (_p select 1) + 0.06, (_p select 2), (_p select 3)];
     _rg ctrlCommit 0.12;
     uiSleep 0.12;
-
+	
     if (!isNull _d) then { _d closeDisplay 0; };
   };
 } else {

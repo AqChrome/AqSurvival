@@ -26,9 +26,17 @@ class AQPH_NotifyWarning
 	sound[] = {"aq_phone\sounds\notify_warning.ogg", 1, 1};
 	titles[] = {};
 };
+
 class AQPH_NotifySOS
 {
 	name = "AQPH_NotifySOS";
 	sound[] = {"aq_phone\sounds\notify_sos.ogg", 1, 1};
+	titles[] = {};
+};
+
+class AQPH_TaskNew
+{
+	name = "AQPH_TaskNew";
+	sound[] = {"aq_phone\sounds\tasks_new.ogg", 1, 1};
 	titles[] = {};
 };

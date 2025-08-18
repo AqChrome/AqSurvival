@@ -13,11 +13,22 @@ class AQPH {
 		class screenPowerOn {};
 		class screenPowerOff {};
 	};
-	
+
   	class Notify {
       file = "aq_phone\notify";
       class notifyPush {};
       class notifyRender {};
       class notifyClose {};
 	};
+
+	class Tasks {
+      file = "aq_phone\tasks";
+      class taskPush {};
+      class tasksOpen {};
+      class tasksClose {};
+      class taskDetail {};
+      class taskAccept {};
+      class taskDecline {};
+	  class testHub {};
+    };
 };
