@@ -23,3 +23,9 @@ if (!isNull _rootGrp) then {
   uiSleep 0.37;
   [] call AQPH_fnc_screenPowerOn;
 };
+
+[] spawn {
+  uiSleep 0.20;
+  [] call AQPH_fnc_notifyRender;
+};
+
