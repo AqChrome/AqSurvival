@@ -13,21 +13,18 @@ class AQ {
 };
 
 class AQPH {
-    tag = "AQPH";
-    class Phone {
+  tag = "AQPH";
+  class Phone
+  {
       file = "aq_phone\functions";
       class init {};
       class registerKeys {};
-      class show {};
-      class hide {};
+      class open {};
+      class close {};
       class buildUI {};
-      class tickClock {};     // NEW
-      class openMail {};   // NEW
-      class mailRenderList {};  // Отрисовать список писем
-      class mailOpenMessage {}; // Открыть конкретное письмо
-      class mailDelete {};      // Удалить письмо
-      class home {};            // Назад на рабочий стол
-    };
+      class setMenuItems {};
+      class menuAction {};
+  };
 };
 
     
