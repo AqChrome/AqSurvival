@@ -21,18 +21,12 @@ class AQPH {
       class show {};
       class hide {};
       class buildUI {};
-<<<<<<< HEAD
-<<<<<<< HEAD
       class tickClock {};     // NEW
       class openMail {};   // NEW
       class mailRenderList {};  // Отрисовать список писем
       class mailOpenMessage {}; // Открыть конкретное письмо
       class mailDelete {};      // Удалить письмо
       class home {};            // Назад на рабочий стол
-=======
->>>>>>> parent of 26e0510 (hot fix KPK)
-=======
->>>>>>> parent of 26e0510 (hot fix KPK)
     };
 };
 
