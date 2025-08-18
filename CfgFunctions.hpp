@@ -24,6 +24,8 @@ class AQPH {
       class buildUI {};
       class setMenuItems {};
       class menuAction {};
+      class screenPowerOn {};
+      class screenPowerOff {};
   };
 };
 

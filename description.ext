@@ -35,6 +35,12 @@ class CfgSettings {
     };
 };
 
+class CfgSounds
+{
+  #include "aq_phone\config.hpp"
+};
+
+
 class CfgFunctions {
   #include "CfgFunctions.hpp"   // внутри .hpp не должно быть ещё одного class CfgFunctions
 };

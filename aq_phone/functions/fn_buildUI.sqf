@@ -66,33 +66,13 @@ _screen ctrlSetPosition [
 ];
 _screen ctrlCommit 0;
 
-// Жёлтая рамка для юстировки
-private _DBG_BORDER = 0.002;
-if (_DBG_BORDER > 0) then {
-  private _pos = ctrlPosition _screen;
-  private _w = _pos select 2;
-  private _h = _pos select 3;
+// Сохраняем, чтобы быстро включать/выключать
+uiNamespace setVariable ["AQPH_ScreenGroup", _screen];
 
-  private _top = _disp ctrlCreate ["RscText", -1, _screen];
-  _top ctrlSetBackgroundColor [1,1,0,1];
-  _top ctrlSetPosition [0, 0, _w, _DBG_BORDER];
-  _top ctrlCommit 0;
-
-  private _bot = _disp ctrlCreate ["RscText", -1, _screen];
-  _bot ctrlSetBackgroundColor [1,1,0,1];
-  _bot ctrlSetPosition [0, _h - _DBG_BORDER, _w, _DBG_BORDER];
-  _bot ctrlCommit 0;
-
-  private _left = _disp ctrlCreate ["RscText", -1, _screen];
-  _left ctrlSetBackgroundColor [1,1,0,1];
-  _left ctrlSetPosition [0, 0, _DBG_BORDER, _h];
-  _left ctrlCommit 0;
-
-  private _right = _disp ctrlCreate ["RscText", -1, _screen];
-  _right ctrlSetBackgroundColor [1,1,0,1];
-  _right ctrlSetPosition [_w - _DBG_BORDER, 0, _DBG_BORDER, _h];
-  _right ctrlCommit 0;
-};
+// ПО УМОЛЧАНИЮ ЭКРАН ВЫКЛЮЧЕН
+_screen ctrlShow false;
+_screen ctrlSetFade 1;
+_screen ctrlCommit 0;
 
 ///////////////////////////////
 // 5) Фон Ч/Б
