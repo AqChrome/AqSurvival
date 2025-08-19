@@ -1,13 +1,13 @@
 disableSerialization;
 
-private _home = uiNamespace getVariable ["PDA_HomeGroup", controlNull];
-private _list = uiNamespace getVariable ["PDA_TasksGroup", controlNull];
+[] call PDA_fnc_pagePop;
 
+private _list = uiNamespace getVariable ["PDA_TasksGroup", controlNull];
 if (!isNull _list) then {
   ctrlDelete _list;
   uiNamespace setVariable ["PDA_TasksGroup", controlNull];
-};
 
-if (!isNull _home) then {
-  _home ctrlShow true;
+  private _map = uiNamespace getVariable ["PDA_Pages", createHashMap];
+  _map deleteAt "tasks";
+  uiNamespace setVariable ["PDA_Pages", _map];
 };

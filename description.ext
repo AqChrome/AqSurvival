@@ -37,13 +37,13 @@ class CfgSettings {
 
 class CfgSounds
 {
-  #include "PDA\sounds\config.hpp"
+  #include "PDA\CfgSounds.hpp" // PDA - Аудио
 };
 
 
 class CfgFunctions {
   #include "CfgFunctions.hpp"
-  #include "PDA\CfgFunctions.hpp" 
+  #include "PDA\CfgFunctions.hpp" // PDA - Скрипты
 };
 
 class PDA_Dialog

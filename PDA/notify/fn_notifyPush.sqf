@@ -5,7 +5,7 @@ private _q = missionNamespace getVariable ["PDA_NotifyQueue", []];
 _q pushBack [_title, _text, _tag];
 missionNamespace setVariable ["PDA_NotifyQueue", _q];
 
-private _now  = diag_tickTime;   // локальный таймер
+private _now  = diag_tickTime;
 private _last = missionNamespace getVariable ["PDA_LastNotifySound", -1];
 if (_last < 0 || {(_now - _last) > 0.5}) then {
   private _snd = switch (toLower _tag) do {

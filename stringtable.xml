@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AqSurvival">
+  <Package name="PDA">
+    <Key ID="STR_AQ_PDA_TOGGLE_HINT">
+      <Original>RShift — open/close</Original>
+      <English>RShift — open/close</English>
+      <French>RShift — ouvrir/fermer</French>
+      <German>RShift — öffnen/schließen</German>
+      <Italian>RShift — apri/chiudi</Italian>
+      <Spanish>RShift — abrir/cerrar</Spanish>
+      <Russian>RShift — открыть/закрыть</Russian>
+    </Key>
+    <Key ID="STR_AQ_PDA_BUTTON_BACK">
+      <Original>Back</Original>
+      <English>Back</English>
+      <French>Retour</French>
+      <German>Zurück</German>
+      <Italian>Indietro</Italian>
+      <Spanish>Atrás</Spanish>
+      <Russian>Назад</Russian>
+    </Key>
+    <Key ID="STR_AQ_PDA_BUTTON_CLOSE">
+      <Original>Close</Original>
+      <English>Close</English>
+      <French>Fermer</French>
+      <German>Schließen</German>
+      <Italian>Chiudi</Italian>
+      <Spanish>Cerrar</Spanish>
+      <Russian>Закрыть</Russian>
+    </Key>
+    <Key ID="STR_AQ_PDA_MENU_TASKS">
+      <Original>Tasks</Original>
+      <English>Tasks</English>
+      <French>Tâches</French>
+      <German>Aufgaben</German>
+      <Italian>Attività</Italian>
+      <Spanish>Tareas</Spanish>
+      <Russian>Задачи</Russian>
+    </Key>
+    <Key ID="STR_AQ_PDA_TASK_NOTASK">
+      <Original>No tasks available</Original>
+      <English>No tasks available</English>
+      <French>Aucune tâche disponible</French>
+      <German>Keine Aufgaben verfügbar</German>
+      <Italian>Nessuna attività disponibile</Italian>
+      <Spanish>No hay tareas disponibles</Spanish>
+      <Russian>Нет доступных заданий</Russian>
+    </Key>
+    <Key ID="STR_AQ_PDA_BUTTON_ACCEPT">
+      <Original>Accept</Original>
+      <English>Accept</English>
+      <French>Accepter</French>
+      <German>Annehmen</German>
+      <Italian>Accetta</Italian>
+      <Spanish>Aceptar</Spanish>
+      <Russian>Принять</Russian>
+    </Key>
+    <Key ID="STR_AQ_PDA_BUTTON_DECLINE">
+      <Original>Decline</Original>
+      <English>Decline</English>
+      <French>Refuser</French>
+      <German>Ablehnen</German>
+      <Italian>Rifiuta</Italian>
+      <Spanish>Rechazar</Spanish>
+      <Russian>Отклонить</Russian>
+    </Key>
+  </Package>
+</Project>

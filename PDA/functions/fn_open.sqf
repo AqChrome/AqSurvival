@@ -22,8 +22,3 @@ playSound "PDA_PowerOn";
   uiSleep 0.48;
   [] call PDA_fnc_screenPowerOn;
 };
-
-[] spawn {
-  uiSleep 0.55;
-  [] call PDA_fnc_notifyRender;
-};

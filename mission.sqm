@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=640;
+		nextID=667;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9679.7734,15.14064,4115.5732};
-		dir[]={-0.4105576,-0.78647983,-0.46140239};
-		up[]={-0.52280909,0.61761588,-0.58755541};
-		aside[]={-0.74706995,-2.9802322e-08,0.66474569};
+		pos[]={9699.666,32.927521,4146.0513};
+		dir[]={-0.35938039,-0.28868616,-0.88746142};
+		up[]={-0.10836158,0.95741534,-0.26759049};
+		aside[]={-0.9269222,3.1595118e-07,0.37536195};
 	};
 };
 binarizationWanted=0;
@@ -43,9 +43,7 @@ addons[]=
 	"ace_disposable",
 	"A3_Weapons_F_LongRangeRifles_GM6",
 	"A3_Weapons_F_LongRangeRifles_M320",
-	"ace_optics",
-	"ace_realisticnames_optics",
-	"rhsusf_sounds",
+	"ace_compat_rhs_usf3_arsenal",
 	"ace_compat_rhs_usf3",
 	"rhsusf_c_troops",
 	"ace_attach",
@@ -58,16 +56,21 @@ addons[]=
 	"kat_pharma",
 	"A3_Characters_F_Exp_Vests",
 	"ace_grenades",
+	"ace_atragmx",
+	"ace_dagr",
+	"ace_kestrel4500",
+	"ace_flashlights",
+	"ace_microdagr",
 	"kat_circulation",
 	"kat_surgery",
 	"kat_vitals",
-	"rhs_c_zil131"
+	"A3_Soft_F_Gamma_Truck_02"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=30;
+		items=33;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -161,120 +164,141 @@ class AddonsMetaData
 		};
 		class Item13
 		{
-			className="ace_optics";
-			name="ACE3 - Optics";
-			author="Команда ACE";
-			url="https://ace3.acemod.org/";
-		};
-		class Item14
-		{
-			className="rhsusf_sounds";
-			name="USF Sounds";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item15
-		{
 			className="ace_compat_rhs_usf3";
 			name="ACE3 - RHS USAF Compatibility";
 			author="Команда ACE";
 			url="https://ace3.acemod.org/";
 		};
-		class Item16
+		class Item14
 		{
 			className="rhsusf_c_troops";
 			name="RHSUSF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item17
+		class Item15
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="Команда ACE";
 			url="https://ace3.acemod.org/";
 		};
-		class Item18
+		class Item16
 		{
 			className="ace_chemlights";
 			name="ACE3 - Chemlights";
 			author="Команда ACE";
 			url="https://ace3.acemod.org/";
 		};
-		class Item19
+		class Item17
 		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
 			author="Команда ACE";
 			url="https://ace3.acemod.org/";
 		};
-		class Item20
+		class Item18
 		{
 			className="Aq_Items";
 			name="Aq_Items";
 		};
-		class Item21
+		class Item19
 		{
 			className="kat_breathing";
 			name="KAT - ADV Medical: Breathing";
 			author="Katalam";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item22
+		class Item20
 		{
 			className="kat_airway";
 			name="KAT - ADV Medical: Airway";
 			author="Katalam";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item23
+		class Item21
 		{
 			className="kat_pharma";
 			name="KAT - ADV Medical: Pharma";
 			author="Katalam";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item24
+		class Item22
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item23
 		{
 			className="ace_grenades";
 			name="ACE3 - Grenades";
 			author="Команда ACE";
 			url="https://ace3.acemod.org/";
 		};
+		class Item24
+		{
+			className="ace_atragmx";
+			name="ACE3 - ATragMX";
+			author="Команда ACE";
+			url="https://ace3.acemod.org/";
+		};
+		class Item25
+		{
+			className="ace_dagr";
+			name="ACE3 - DAGR";
+			author="Команда ACE";
+			url="https://ace3.acemod.org/";
+		};
 		class Item26
+		{
+			className="ace_kestrel4500";
+			name="ACE3 - Kestrel 4500";
+			author="Команда ACE";
+			url="https://ace3.acemod.org/";
+		};
+		class Item27
+		{
+			className="ace_flashlights";
+			name="ACE3 - Flashlights";
+			author="Команда ACE";
+			url="https://ace3.acemod.org/";
+		};
+		class Item28
+		{
+			className="ace_microdagr";
+			name="ACE3 - MicroDAGR";
+			author="Команда ACE";
+			url="https://ace3.acemod.org/";
+		};
+		class Item29
 		{
 			className="kat_circulation";
 			name="KAT - ADV Medical: Circulation";
 			author="Katalam";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item27
+		class Item30
 		{
 			className="kat_surgery";
 			name="KAT - ADV Medical: Surgery";
 			author="Mazinski";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item28
+		class Item31
 		{
 			className="kat_vitals";
 			name="KAT - ADV Medical: Vitals";
 			author="Mazinski";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item29
+		class Item32
 		{
-			className="rhs_c_zil131";
-			name="ZiL-131 Truck";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
+			className="A3_Soft_F_Gamma";
+			name="Arma 3 - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -282,8 +306,8 @@ dlcs[]=
 {
 	"Kart",
 	"RHS_USAF",
-	"Expansion",
-	"RHS_AFRF"
+	"RHS_AFRF",
+	"Expansion"
 };
 randomSeed=15373329;
 class ScenarioData
@@ -292,7 +316,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -328,8 +352,8 @@ class Mission
 		year=2035;
 		month=6;
 		day=6;
-		hour=15;
-		minute=7;
+		hour=12;
+		minute=0;
 		startFogBase=250;
 		forecastFogBase=250;
 		startFogDecay=0.014;
@@ -337,7 +361,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=479;
+		items=480;
 		class Item0
 		{
 			dataType="Group";
@@ -350,7 +374,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9680.833,4.0497785,4108.1748};
+						position[]={9677.1943,4.0759802,4106.2456};
 						angles[]={0,5.7634783,0};
 					};
 					side="West";
@@ -361,6 +385,7 @@ class Mission
 					};
 					id=80;
 					type="B_Survivor_F";
+					atlOffset=4.7683716e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -397,6 +422,7 @@ class Mission
 			{
 			};
 			id=79;
+			atlOffset=4.7683716e-07;
 		};
 		class Item1
 		{
@@ -7541,8 +7567,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9674.4736,3.8353059,4109.5269};
-						angles[]={0,2.7864952,0};
+						position[]={9682.4473,14.565583,4027.0901};
+						angles[]={0,5.0036554,-0};
 					};
 					side="West";
 					flags=7;
@@ -7553,24 +7579,30 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="rhs_weap_hk416d10_LMT_wd";
-								optics="ACE_optic_Hamr_2D";
-								muzzle="rhsusf_acc_rotex5_grey";
-								underBarrel="rhsusf_acc_rvg_de";
-								firemode="rhs_weap_hk416d10_LMT_wd:Single";
+								name="rhs_weap_XM2010_d";
+								optics="rhsusf_acc_LEUPOLDMK4_2_d";
+								muzzle="rhsusf_acc_M2010S_d";
+								flashlight="rhsusf_acc_anpeq15side_bk";
+								underBarrel="rhs_acc_harris_swivel";
+								firemode="rhs_weap_XM2010_d:Single";
 								class primaryMuzzleMag
 								{
-									name="rhs_mag_30Rnd_556x45_M855A1_Stanag";
-									ammoLeft=30;
+									name="rhsusf_5Rnd_300winmag_xm2010";
+									ammoLeft=5;
 								};
+							};
+							class secondaryWeapon
+							{
+								name="rhs_weap_rshg2";
 							};
 							class handgun
 							{
-								name="rhsusf_weap_m1911a1";
+								name="rhsusf_weap_MP7A2_folded";
+								muzzle="rhsusf_acc_rotex_mp7";
 								class primaryMuzzleMag
 								{
-									name="rhsusf_mag_7x45acp_MHP";
-									ammoLeft=7;
+									name="rhsusf_mag_40Rnd_46x30_FMJ";
+									ammoLeft=40;
 								};
 							};
 							class binocular
@@ -7672,7 +7704,7 @@ class Mission
 								isBackpack=0;
 								class MagazineCargo
 								{
-									items=3;
+									items=4;
 									class Item0
 									{
 										name="HandGrenade";
@@ -7690,6 +7722,41 @@ class Mission
 										name="SmokeShell";
 										count=2;
 										ammoLeft=1;
+									};
+									class Item3
+									{
+										name="rhsusf_5Rnd_300winmag_xm2010";
+										count=5;
+										ammoLeft=5;
+									};
+								};
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_ATragMX";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_DAGR";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_Kestrel4500";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_Flashlight_KSF1";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_microDAGR";
+										count=1;
 									};
 								};
 							};
@@ -7792,7 +7859,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9676.3447,4.0718555,4105.7764};
+						position[]={9676.2725,4.0680408,4105.8364};
 						angles[]={0,5.7634783,0};
 					};
 					side="West";
@@ -7803,6 +7870,7 @@ class Mission
 					};
 					id=593;
 					type="B_Survivor_F";
+					atlOffset=4.7683716e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7839,6 +7907,7 @@ class Mission
 			{
 			};
 			id=592;
+			atlOffset=4.7683716e-07;
 		};
 		class Item477
 		{
@@ -7852,8 +7921,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9670.6768,4.1026592,4102.9897};
-						angles[]={0,5.7634783,0};
+						position[]={9675.458,4.0658288,4105.4312};
+						angles[]={0,5.6944704,0};
 					};
 					side="West";
 					flags=7;
@@ -7863,7 +7932,6 @@ class Mission
 					};
 					id=595;
 					type="B_Survivor_F";
-					atlOffset=-4.7683716e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7900,24 +7968,88 @@ class Mission
 			{
 			};
 			id=594;
-			atlOffset=-4.7683716e-07;
 		};
 		class Item478
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9388.3164,6.062057,4030.5342};
+						angles[]={0.0026744273,1.8091139,0.018663859};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=665;
+					type="O_Soldier_F";
+					atlOffset=-1.2874603e-05;
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					loiterAltitude=-3.4028235e+38;
+					position[]={9723.4287,4.0201573,4113.0737};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=666;
+					type="Move";
+					atlOffset=7.0095062e-05;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=665;
+						item1=664;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
+			id=663;
+			atlOffset=-1.2874603e-05;
+		};
+		class Item479
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9669.9863,5.7043977,4112.7949};
-				angles[]={0.050623242,3.4519498,0.02666023};
+				position[]={9388.2715,8.4418993,4030.4905};
+				angles[]={0.0026744273,1.8091139,0.018663859};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 			};
-			id=639;
-			type="rhs_zil131_vmf";
-			atlOffset=-0.002559185;
+			id=664;
+			type="O_Truck_02_Ammo_F";
+			atlOffset=-1.2874603e-05;
 		};
 	};
 };

@@ -1,3 +1,3 @@
 missionNamespace setVariable ["PDA_MenuItems", [
-  ["Задачи",{[] call PDA_fnc_tasksOpen;}]
+  [localize "STR_AQ_PDA_MENU_TASKS",{[] call PDA_fnc_tasksOpen;}]
 ]];
