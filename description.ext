@@ -56,8 +56,8 @@ class PDA_Dialog
     class Controls {};
 };
 
-#define HALs_DEF_INIT
-#include "core\economy\HALs\Addons\main\config.hpp"
-#undef HALs_DEF_INIT
+#define AQ_DEF_INIT
+#include "core\economy\main\config.hpp"
+#undef AQ_DEF_INIT
 
 #include "core\config.hpp"

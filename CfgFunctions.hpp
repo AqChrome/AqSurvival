@@ -1,6 +1,6 @@
-#define HALs_DEF_FUNCTIONS
-#include "core\economy\HALs\Addons\main\config.hpp"
-#undef HALs_DEF_FUNCTIONS
+#define AQ_DEF_FUNCTIONS
+#include "core\economy\main\config.hpp"
+#undef AQ_DEF_FUNCTIONS
 
 class AQ {
 	tag = "AQ";
