@@ -37,27 +37,27 @@ class CfgSettings {
 
 class CfgSounds
 {
-  #include "aq_phone\sounds\config.hpp"
+  #include "PDA\CfgSounds.hpp" // PDA - Аудио
 };
 
 
 class CfgFunctions {
   #include "CfgFunctions.hpp"
-  #include "aq_phone\CfgFunctions.hpp" 
+  #include "PDA\CfgFunctions.hpp" // PDA - Скрипты
 };
 
-class AQPH_Dialog
+class PDA_Dialog
 {
     idd = 95210;
     movingEnable = 0;
     enableSimulation = 1;
-    onLoad   = "uiNamespace setVariable ['AQPH_Display', _this select 0]";
-    onUnload = "uiNamespace setVariable ['AQPH_Display', displayNull]";
+    onLoad   = "uiNamespace setVariable ['PDA_Display', _this select 0]";
+    onUnload = "uiNamespace setVariable ['PDA_Display', displayNull]";
     class Controls {};
 };
 
-#define HALs_DEF_INIT
-#include "core\economy\HALs\Addons\main\config.hpp"
-#undef HALs_DEF_INIT
+#define AQ_DEF_INIT
+#include "core\economy\main\config.hpp"
+#undef AQ_DEF_INIT
 
 #include "core\config.hpp"
