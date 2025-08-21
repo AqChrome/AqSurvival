@@ -5,7 +5,7 @@
 0) О ЧЁМ ЭТО
 ------------------------------------------------------------
 КПК‑мод предоставляет локальную функцию уведомлений:
-    AQPH_fnc_notifyPush  (работает на клиенте)
+    PDA_fnc_notifyPush  (работает на клиенте)
 
 С сервера можно слать уведомления игрокам с заголовком, 
 текстом и тегом. На клиенте они складываются в очередь,
@@ -13,10 +13,10 @@
 страницы (по одному за раз, ничего не теряется).
 
 Формат вызова (локально на клиенте):
-    ["_title","_text","_tag"] call AQPH_fnc_notifyPush;
+    ["_title","_text","_tag"] call PDA_fnc_notifyPush;
 
 С сервера (через remoteExecCall):
-    ["_title","_text","_tag"] remoteExecCall ["AQPH_fnc_notifyPush", _player];
+    ["_title","_text","_tag"] remoteExecCall ["PDA_fnc_notifyPush", _player];
 
 
 1) БЫСТРЫЕ РЕЦЕПТЫ С СЕРВЕРА
@@ -24,22 +24,22 @@
 
 1.1 Одному игроку:
     ["Розыск","Подозреваемый в 034‑112.","warning"]
-        remoteExecCall ["AQPH_fnc_notifyPush", _plr];
+        remoteExecCall ["PDA_fnc_notifyPush", _plr];
 
 1.2 Всем игрокам:
     ["Сервер","Рестарт через 5 минут.","news"]
-        remoteExecCall ["AQPH_fnc_notifyPush", 0];
+        remoteExecCall ["PDA_fnc_notifyPush", 0];
 
 1.3 Игрокам конкретной стороны:
     {
       ["Брифинг","Выброс через 30 минут.","news"]
-        remoteExecCall ["AQPH_fnc_notifyPush", _x];
+        remoteExecCall ["PDA_fnc_notifyPush", _x];
     } forEach (allPlayers select { side _x == WEST });
 
 1.4 Игрокам в группе:
     {
       ["Отряд","Перестроиться в колонну.","news"]
-        remoteExecCall ["AQPH_fnc_notifyPush", _x];
+        remoteExecCall ["PDA_fnc_notifyPush", _x];
     } forEach (units _grp select { isPlayer _x });
 
 1.5 По UID:
@@ -48,7 +48,7 @@
                      param [0, objNull];
     if (!isNull _plr) then {
       ["Личное","Зайдите на связь.","sos"]
-        remoteExecCall ["AQPH_fnc_notifyPush", _plr];
+        remoteExecCall ["PDA_fnc_notifyPush", _plr];
     };
 
 
@@ -119,11 +119,11 @@ OnActivation:
 6) ОТЛАДКА
 ------------------------------------------------------------
 Локально (клиент, консоль):
-    ["Тест","Привет из консоли.","news"] call AQPH_fnc_notifyPush;
+    ["Тест","Привет из консоли.","news"] call PDA_fnc_notifyPush;
 
 С сервера:
     ["Сервер","Проверка рассылки.","news"]
-        remoteExecCall ["AQPH_fnc_notifyPush", 0];
+        remoteExecCall ["PDA_fnc_notifyPush", 0];
 
 
 7) JIP
@@ -134,7 +134,7 @@ OnActivation:
 
 8) БЕЗОПАСНОСТЬ
 ------------------------------------------------------------
-- Не вызывай AQPH_fnc_notifyPush для чужих клиентов с клиента.
+- Не вызывай PDA_fnc_notifyPush для чужих клиентов с клиента.
 - Всегда используй сервер как посредник.
 
 

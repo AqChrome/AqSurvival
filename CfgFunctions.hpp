@@ -26,4 +26,9 @@ class AQ {
 		class grantPersonalTask {};  
 		class grantGroupTask {};
 	};
+
+	class Survival_water {
+		file = "core\survival\needs\thirst";
+		class collectWater {};
+	};
 };

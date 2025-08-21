@@ -1,248 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="AqSurvival">
-  <Package name="PDA">
-    <Key ID="STR_AQ_PDA_TOGGLE_HINT">
-      <Original>RShift — open/close</Original>
-      <English>RShift — open/close</English>
-      <French>RShift — ouvrir/fermer</French>
-      <German>RShift — öffnen/schließen</German>
-      <Italian>RShift — apri/chiudi</Italian>
-      <Spanish>RShift — abrir/cerrar</Spanish>
-      <Russian>RShift — открыть/закрыть</Russian>
-    </Key>
-    <Key ID="STR_AQ_PDA_BUTTON_BACK">
-      <Original>Back</Original>
-      <English>Back</English>
-      <French>Retour</French>
-      <German>Zurück</German>
-      <Italian>Indietro</Italian>
-      <Spanish>Atrás</Spanish>
-      <Russian>Назад</Russian>
-    </Key>
-    <Key ID="STR_AQ_PDA_BUTTON_CLOSE">
-      <Original>Close</Original>
-      <English>Close</English>
-      <French>Fermer</French>
-      <German>Schließen</German>
-      <Italian>Chiudi</Italian>
-      <Spanish>Cerrar</Spanish>
-      <Russian>Закрыть</Russian>
-    </Key>
-    <Key ID="STR_AQ_PDA_MENU_TASKS">
-      <Original>Tasks</Original>
-      <English>Tasks</English>
-      <French>Tâches</French>
-      <German>Aufgaben</German>
-      <Italian>Attività</Italian>
-      <Spanish>Tareas</Spanish>
-      <Russian>Задачи</Russian>
-    </Key>
-    <Key ID="STR_AQ_PDA_TASK_NOTASK">
-      <Original>No tasks available</Original>
-      <English>No tasks available</English>
-      <French>Aucune tâche disponible</French>
-      <German>Keine Aufgaben verfügbar</German>
-      <Italian>Nessuna attività disponibile</Italian>
-      <Spanish>No hay tareas disponibles</Spanish>
-      <Russian>Нет доступных заданий</Russian>
-    </Key>
-    <Key ID="STR_AQ_PDA_BUTTON_ACCEPT">
-      <Original>Accept</Original>
-      <English>Accept</English>
-      <French>Accepter</French>
-      <German>Annehmen</German>
-      <Italian>Accetta</Italian>
-      <Spanish>Aceptar</Spanish>
-      <Russian>Принять</Russian>
-    </Key>
-    <Key ID="STR_AQ_PDA_BUTTON_DECLINE">
-      <Original>Decline</Original>
-      <English>Decline</English>
-      <French>Refuser</French>
-      <German>Ablehnen</German>
-      <Italian>Rifiuta</Italian>
-      <Spanish>Rechazar</Spanish>
-      <Russian>Отклонить</Russian>
-    </Key>
-  </Package>
+	<Package name="ECONOMY">
+		<Key ID="STR_AQ_STORE_CURRENCY_SYMBOL">
+		  <Original>$</Original>
+		  <English>$</English>
+		  <Russian>₽</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_CHECKBOX_SORT">
+		  <Original>Sort</Original>
+		  <English>Sort</English>
+		  <French>Trier</French>
+		  <German>Sortieren</German>
+		  <Italian>Ordina</Italian>
+		  <Spanish>Ordenar</Spanish>
+		  <Russian>Сортировка</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_CHECKBOX_AVAILABLE">
+		  <Original>Only available</Original>
+		  <English>Only available</English>
+		  <French>Uniquement disponibles</French>
+		  <German>Nur verfügbare Artikel</German>
+		  <Italian>Solo disponibili</Italian>
+		  <Spanish>Solo disponibles</Spanish>
+		  <Russian>Только в наличии</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_CHECKBOX_COMPATIBLE">
+		  <Original>Only compatible</Original>
+		  <English>Only compatible</English>
+		  <French>Uniquement compatibles</French>
+		  <German>Nur kompatible Artikel</German>
+		  <Italian>Solo compatibili</Italian>
+		  <Spanish>Solo compatibles</Spanish>
+		  <Russian>Только совместимые</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_CHECKBOX_SELLFILTER">
+		  <Original>Show sellable</Original>
+		  <English>Show sellable</English>
+		  <French>Afficher les articles vendables</French>
+		  <German>Verkäufliche Artikel anzeigen</German>
+		  <Italian>Mostra vendibili</Italian>
+		  <Spanish>Mostrar artículos vendibles</Spanish>
+		  <Russian>Показывать продаваемые</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_CHECKBOX_EQUIP">
+		  <Original>Equip after purchase</Original>
+		  <English>Equip after purchase</English>
+		  <French>Équiper après achat</French>
+		  <German>Nach dem Kauf ausrüsten</German>
+		  <Italian>Equipaggiare dopo l'acquisto</Italian>
+		  <Spanish>Equipar tras la compra</Spanish>
+		  <Russian>Экипировать при покупке</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_BUTTON_PURCHASE">
+		  <Original>Purchase</Original>
+		  <English>Purchase</English>
+		  <French>Acheter</French>
+		  <German>Kaufen</German>
+		  <Italian>Acquista</Italian>
+		  <Spanish>Comprar</Spanish>
+		  <Russian>Купить</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_OPEN_ACTION">
+		  <Original>Open: %1</Original>
+		  <English>Open: %1</English>
+		  <French>Ouvrir : %1</French>
+		  <German>Öffnen: %1</German>
+		  <Italian>Apri: %1</Italian>
+		  <Spanish>Abrir: %1</Spanish>
+		  <Russian>Открыть: %1</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_ACTION">
+		  <Original>Shop</Original>
+		  <English>Shop</English>
+		  <French>Magasin</French>
+		  <German>Laden</German>
+		  <Italian>Negozio</Italian>
+		  <Spanish>Tienda</Spanish>
+		  <Russian>Магазин</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_VENDOR_WEAPON_T1">
+		  <Original>Weapons Vendor (T1)</Original>
+		  <English>Weapons Vendor (T1)</English>
+		  <French>Vendeur d'armes (T1)</French>
+		  <German>Waffenhändler (T1)</German>
+		  <Italian>Venditore di armi (T1)</Italian>
+		  <Spanish>Vendedor de armas (T1)</Spanish>
+		  <Russian>Торговец оружием (Т1)</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_VENDOR_WEAPON_T2">
+		  <Original>Weapons Vendor (T2)</Original>
+		  <English>Weapons Vendor (T2)</English>
+		  <French>Vendeur d'armes (T2)</French>
+		  <German>Waffenhändler (T2)</German>
+		  <Italian>Venditore di armi (T2)</Italian>
+		  <Spanish>Vendedor de armas (T2)</Spanish>
+		  <Russian>Торговец оружием (Т2)</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_VENDOR_WEAPON_T3">
+		  <Original>Weapons Vendor (T3)</Original>
+		  <English>Weapons Vendor (T3)</English>
+		  <French>Vendeur d'armes (T3)</French>
+		  <German>Waffenhändler (T3)</German>
+		  <Italian>Venditore di armi (T3)</Italian>
+		  <Spanish>Vendedor de armas (T3)</Spanish>
+		  <Russian>Торговец оружием (Т3)</Russian>
+		</Key>
 
-  <Package name="ECONOMY">
-    <Key ID="STR_AQ_STORE_CURRENCY_SYMBOL">
-      <Original>$</Original>
-      <English>$</English>
-      <Russian>₽</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_CHECKBOX_SORT">
-      <Original>Sort</Original>
-      <English>Sort</English>
-      <French>Trier</French>
-      <German>Sortieren</German>
-      <Italian>Ordina</Italian>
-      <Spanish>Ordenar</Spanish>
-      <Russian>Сортировка</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_CHECKBOX_AVAILABLE">
-      <Original>Only available</Original>
-      <English>Only available</English>
-      <French>Uniquement disponibles</French>
-      <German>Nur verfügbare Artikel</German>
-      <Italian>Solo disponibili</Italian>
-      <Spanish>Solo disponibles</Spanish>
-      <Russian>Только в наличии</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_CHECKBOX_COMPATIBLE">
-      <Original>Only compatible</Original>
-      <English>Only compatible</English>
-      <French>Uniquement compatibles</French>
-      <German>Nur kompatible Artikel</German>
-      <Italian>Solo compatibili</Italian>
-      <Spanish>Solo compatibles</Spanish>
-      <Russian>Только совместимые</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_CHECKBOX_SELLFILTER">
-      <Original>Show sellable</Original>
-      <English>Show sellable</English>
-      <French>Afficher les articles vendables</French>
-      <German>Verkäufliche Artikel anzeigen</German>
-      <Italian>Mostra vendibili</Italian>
-      <Spanish>Mostrar artículos vendibles</Spanish>
-      <Russian>Показывать продаваемые</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_CHECKBOX_EQUIP">
-      <Original>Equip after purchase</Original>
-      <English>Equip after purchase</English>
-      <French>Équiper après achat</French>
-      <German>Nach dem Kauf ausrüsten</German>
-      <Italian>Equipaggiare dopo l'acquisto</Italian>
-      <Spanish>Equipar tras la compra</Spanish>
-      <Russian>Экипировать при покупке</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_BUTTON_PURCHASE">
-      <Original>Purchase</Original>
-      <English>Purchase</English>
-      <French>Acheter</French>
-      <German>Kaufen</German>
-      <Italian>Acquista</Italian>
-      <Spanish>Comprar</Spanish>
-      <Russian>Купить</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_OPEN_ACTION">
-      <Original>Open: %1</Original>
-      <English>Open: %1</English>
-      <French>Ouvrir : %1</French>
-      <German>Öffnen: %1</German>
-      <Italian>Apri: %1</Italian>
-      <Spanish>Abrir: %1</Spanish>
-      <Russian>Открыть: %1</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_ACTION">
-      <Original>Shop</Original>
-      <English>Shop</English>
-      <French>Magasin</French>
-      <German>Laden</German>
-      <Italian>Negozio</Italian>
-      <Spanish>Tienda</Spanish>
-      <Russian>Магазин</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_VENDOR_WEAPON_T1">
-      <Original>Weapons Vendor (T1)</Original>
-      <English>Weapons Vendor (T1)</English>
-      <French>Vendeur d'armes (T1)</French>
-      <German>Waffenhändler (T1)</German>
-      <Italian>Venditore di armi (T1)</Italian>
-      <Spanish>Vendedor de armas (T1)</Spanish>
-      <Russian>Торговец оружием (Т1)</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_VENDOR_WEAPON_T2">
-      <Original>Weapons Vendor (T2)</Original>
-      <English>Weapons Vendor (T2)</English>
-      <French>Vendeur d'armes (T2)</French>
-      <German>Waffenhändler (T2)</German>
-      <Italian>Venditore di armi (T2)</Italian>
-      <Spanish>Vendedor de armas (T2)</Spanish>
-      <Russian>Торговец оружием (Т2)</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_VENDOR_WEAPON_T3">
-      <Original>Weapons Vendor (T3)</Original>
-      <English>Weapons Vendor (T3)</English>
-      <French>Vendeur d'armes (T3)</French>
-      <German>Waffenhändler (T3)</German>
-      <Italian>Venditore di armi (T3)</Italian>
-      <Spanish>Vendedor de armas (T3)</Spanish>
-      <Russian>Торговец оружием (Т3)</Russian>
-    </Key>
+		<Key ID="STR_AQ_STORE_VENDOR_WEAPON_PISTOLS">
+		  <Original>Pistols</Original>
+		  <English>Pistols</English>
+		  <French>Pistolets</French>
+		  <German>Pistolen</German>
+		  <Italian>Pistole</Italian>
+		  <Spanish>Pistolas</Spanish>
+		  <Russian>Пистолеты</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_VENDOR_WEAPON_SHOTGUNS">
+		  <Original>Shotguns</Original>
+		  <English>Shotguns</English>
+		  <French>Fusils à pompe</French>
+		  <German>Schrotflinten</German>
+		  <Italian>Fucili a pompa</Italian>
+		  <Spanish>Escopetas</Spanish>
+		  <Russian>Дробовики</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_VENDOR_WEAPON_SUBMACHINEGUNS">
+		  <Original>Submachine Guns</Original>
+		  <English>Submachine Guns</English>
+		  <French>Pistolets-mitrailleurs</French>
+		  <German>Maschinenpistolen</German>
+		  <Italian>Mitragliette</Italian>
+		  <Spanish>Subfusiles</Spanish>
+		  <Russian>Пистолеты-пулемёты</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_VENDOR_WEAPON_MACHINEGUNS">
+		  <Original>Light Machine Guns</Original>
+		  <English>Light Machine Guns</English>
+		  <French>Mitrailleuses légères</French>
+		  <German>Leichte Maschinengewehre</German>
+		  <Italian>Mitragliatrici leggere</Italian>
+		  <Spanish>Ametralladoras ligeras</Spanish>
+		  <Russian>Ручные пулемёты</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_VENDOR_WEAPON_RIFLES">
+		  <Original>Assault Rifles</Original>
+		  <English>Assault Rifles</English>
+		  <French>Fusils d'assaut</French>
+		  <German>Sturmgewehre</German>
+		  <Italian>Fucili d'assalto</Italian>
+		  <Spanish>Fusiles de asalto</Spanish>
+		  <Russian>Штурмовые винтовки</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_VENDOR_WEAPON_SNIPERS">
+		  <Original>Sniper Rifles</Original>
+		  <English>Sniper Rifles</English>
+		  <French>Fusils de précision</French>
+		  <German>Scharfschützengewehre</German>
+		  <Italian>Fucili di precisione</Italian>
+		  <Spanish>Rifles de francotirador</Spanish>
+		  <Russian>Снайперские винтовки</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_VENDOR_WEAPON_LAUNCHERS">
+		  <Original>Launchers</Original>
+		  <English>Launchers</English>
+		  <French>Lanceurs</French>
+		  <German>Werfer</German>
+		  <Italian>Lanciatori</Italian>
+		  <Spanish>Lanzadores</Spanish>
+		  <Russian>Пусковые установки</Russian>
+		</Key>
+		<Key ID="STR_AQ_STORE_VENDOR_WEAPON_AMMO">
+		  <Original>Ammunition</Original>
+		  <English>Ammunition</English>
+		  <French>Munitions</French>
+		  <German>Munition</German>
+		  <Italian>Munizioni</Italian>
+		  <Spanish>Munición</Spanish>
+		  <Russian>Боеприпасы</Russian>
+		</Key>
+	</Package>
 
-    <Key ID="STR_AQ_STORE_VENDOR_WEAPON_PISTOLS">
-      <Original>Pistols</Original>
-      <English>Pistols</English>
-      <French>Pistolets</French>
-      <German>Pistolen</German>
-      <Italian>Pistole</Italian>
-      <Spanish>Pistolas</Spanish>
-      <Russian>Пистолеты</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_VENDOR_WEAPON_SHOTGUNS">
-      <Original>Shotguns</Original>
-      <English>Shotguns</English>
-      <French>Fusils à pompe</French>
-      <German>Schrotflinten</German>
-      <Italian>Fucili a pompa</Italian>
-      <Spanish>Escopetas</Spanish>
-      <Russian>Дробовики</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_VENDOR_WEAPON_SUBMACHINEGUNS">
-      <Original>Submachine Guns</Original>
-      <English>Submachine Guns</English>
-      <French>Pistolets-mitrailleurs</French>
-      <German>Maschinenpistolen</German>
-      <Italian>Mitragliette</Italian>
-      <Spanish>Subfusiles</Spanish>
-      <Russian>Пистолеты-пулемёты</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_VENDOR_WEAPON_MACHINEGUNS">
-      <Original>Light Machine Guns</Original>
-      <English>Light Machine Guns</English>
-      <French>Mitrailleuses légères</French>
-      <German>Leichte Maschinengewehre</German>
-      <Italian>Mitragliatrici leggere</Italian>
-      <Spanish>Ametralladoras ligeras</Spanish>
-      <Russian>Ручные пулемёты</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_VENDOR_WEAPON_RIFLES">
-      <Original>Assault Rifles</Original>
-      <English>Assault Rifles</English>
-      <French>Fusils d'assaut</French>
-      <German>Sturmgewehre</German>
-      <Italian>Fucili d'assalto</Italian>
-      <Spanish>Fusiles de asalto</Spanish>
-      <Russian>Штурмовые винтовки</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_VENDOR_WEAPON_SNIPERS">
-      <Original>Sniper Rifles</Original>
-      <English>Sniper Rifles</English>
-      <French>Fusils de précision</French>
-      <German>Scharfschützengewehre</German>
-      <Italian>Fucili di precisione</Italian>
-      <Spanish>Rifles de francotirador</Spanish>
-      <Russian>Снайперские винтовки</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_VENDOR_WEAPON_LAUNCHERS">
-      <Original>Launchers</Original>
-      <English>Launchers</English>
-      <French>Lanceurs</French>
-      <German>Werfer</German>
-      <Italian>Lanciatori</Italian>
-      <Spanish>Lanzadores</Spanish>
-      <Russian>Пусковые установки</Russian>
-    </Key>
-    <Key ID="STR_AQ_STORE_VENDOR_WEAPON_AMMO">
-      <Original>Ammunition</Original>
-      <English>Ammunition</English>
-      <French>Munitions</French>
-      <German>Munition</German>
-      <Italian>Munizioni</Italian>
-      <Spanish>Munición</Spanish>
-      <Russian>Боеприпасы</Russian>
-    </Key>
-  </Package>
+	<Package name="SURVIVAL">
+		<Key ID="STR_AQ_ACTION_COLLECT_WATER">
+		  <Original>Collect water</Original>
+		  <English>Collect water</English>
+		  <Russian>Набрать воду</Russian>
+		</Key>
+		<Key ID="STR_AQ_HOLD_FILLING">
+		  <Original>Hold to fill</Original>
+		  <English>Hold to fill</English>
+		  <Russian>Удерживайте, чтобы набрать</Russian>
+		</Key>
+	</Package>
 </Project>

@@ -35,10 +35,10 @@
     params ["_plr","_tag","_ctx"];
 
     switch (toLower _tag) do {
-      case "kill":     { [_plr,_tag,_ctx] call AqPDA_fnc_grantPersonalTask; };
-      case "logistic": { [_plr,_tag,_ctx] call AqPDA_fnc_grantPersonalTask; };
-      case "destroy":  { [_plr,_tag,_ctx] call AqPDA_fnc_grantGroupTask;    }; // ← пример: "destroy" делаем групповым
-      default          { [_plr,_tag,_ctx] call AqPDA_fnc_grantPersonalTask; };
+      case "kill":     { [_plr,_tag,_ctx] call PDA_fnc_grantPersonalTask; };
+      case "logistic": { [_plr,_tag,_ctx] call PDA_fnc_grantPersonalTask; };
+      case "destroy":  { [_plr,_tag,_ctx] call PDA_fnc_grantGroupTask;    }; // ← пример: "destroy" делаем групповым
+      default          { [_plr,_tag,_ctx] call PDA_fnc_grantPersonalTask; };
     };
 
 1.3 Реализации выдачи (SERVER ONLY)
@@ -133,7 +133,7 @@ PDA_fnc_taskPush — КЛИЕНТСКАЯ функция мода, добавл�
 - Сервер пушит запись задачи в КПК игрока → PDA_fnc_taskPush на его клиенте.
 - Игрок открывает КПК → «Задачи» → выбирает → «Принять».
 - Мод берёт ТЕГ и вызывает missionNamespace["PDA_TaskHub"] (на клиенте).
-- Клиент шлёт на сервер: [_plr,_tag,_ctx] → AqPDA_fnc_taskHubServer.
+- Клиент шлёт на сервер: [_plr,_tag,_ctx] → PDA_fnc_taskHubServer.
 - Сервер, по switch, вызывает grantPersonalTask ИЛИ grantGroupTask.
 - Ванильная задача создаётся и назначается (персонально/группа).
 
@@ -142,17 +142,17 @@ PDA_fnc_taskPush — КЛИЕНТСКАЯ функция мода, добавл�
 ------------------------------------------------------------
 A) Всегда персонально
    switch (toLower _tag) do {
-     default { [_plr,_tag,_ctx] call AqPDA_fnc_grantPersonalTask; };
+     default { [_plr,_tag,_ctx] call PDA_fnc_grantPersonalTask; };
    };
 
 B) Смешанная (destroy → групповая, остальное → персонально)
    switch (toLower _tag) do {
-     case "destroy":  { [_plr,_tag,_ctx] call AqPDA_fnc_grantGroupTask; };
-     default:         { [_plr,_tag,_ctx] call AqPDA_fnc_grantPersonalTask; };
+     case "destroy":  { [_plr,_tag,_ctx] call PDA_fnc_grantGroupTask; };
+     default:         { [_plr,_tag,_ctx] call PDA_fnc_grantPersonalTask; };
    };
 
 C) Всегда групповая
-   [_plr,_tag,_ctx] call AqPDA_fnc_grantGroupTask;
+   [_plr,_tag,_ctx] call PDA_fnc_grantGroupTask;
 
 
 5) ЧАСТЫЕ ОШИБКИ
@@ -160,7 +160,7 @@ C) Всегда групповая
 - Не зарегистрирован PDA_TaskHub на клиентах → «Принять» ничего не делает.
 - Пытаюсь вызвать PDA_fnc_taskPush с сервера напрямую (без remoteExecCall) → запись в КПК не появится.
 - Персональные задачи нужно создавать ЛОКАЛЬНО у клиента (через remoteExec), а групповые — на сервере (владелец "group").
-- Перепутаны префиксы: внутри мода — PDA_, в миссии — свой (AqPDA_/MSN_/MY_) по желанию.
+- Перепутаны префиксы: внутри мода — PDA_, в миссии — свой (PDA_/MSN_/MY_) по желанию.
 
 
 6) ШПАРГАЛКА
@@ -173,8 +173,8 @@ C) Всегда групповая
 
 Роутер на сервере:
   switch (toLower _tag) do {
-    case "destroy": { [_plr,_tag,_ctx] call AqPDA_fnc_grantGroupTask; };
-    default:        { [_plr,_tag,_ctx] call AqPDA_fnc_grantPersonalTask; };
+    case "destroy": { [_plr,_tag,_ctx] call PDA_fnc_grantGroupTask; };
+    default:        { [_plr,_tag,_ctx] call PDA_fnc_grantPersonalTask; };
   };
 
 Персональная задача:

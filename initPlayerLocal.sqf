@@ -1,5 +1,3 @@
-[] call PDA_fnc_init;
-
 player addEventHandler ["InventoryOpened", {
     [{
         !(isNull (findDisplay 602))
@@ -12,3 +10,4 @@ player addEventHandler ["InventoryOpened", {
         } forEach [633, 638, 619];
     }] call CBA_fnc_waitUntilAndExecute;
 }];
+

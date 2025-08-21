@@ -5,21 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1537;
+	toggles=521;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
 	class ItemIDProvider
 	{
-		nextID=689;
+		nextID=712;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1;
+		nextID=2;
 	};
 	class Camera
 	{
-		pos[]={9671.957,5.166038,4111.5278};
-		dir[]={0.56723779,-0.14058612,-0.81146598};
-		up[]={0.080545709,0.9900685,-0.11522523};
-		aside[]={-0.81960595,-7.4505806e-09,-0.57292789};
+		pos[]={9671.2598,5.3175554,4107.9766};
+		dir[]={0.57608312,0.02662326,0.81697094};
+		up[]={-0.01534097,0.99965197,-0.021755539};
+		aside[]={0.81726867,-7.2555849e-08,-0.57629514};
 	};
 };
 binarizationWanted=0;
@@ -51,13 +55,18 @@ addons[]=
 	"A3_Weapons_F_Items",
 	"ace_medical_treatment",
 	"ace_compat_rhs_usf3_nightvision",
-	"Aq_Items"
+	"Aq_Items",
+	"kat_breathing",
+	"kat_airway",
+	"kat_misc",
+	"A3_Structures_F_Exp_Infrastructure_WaterSupply",
+	"ace_field_rations"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=19;
+		items=24;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -189,12 +198,48 @@ class AddonsMetaData
 			className="Aq_Items";
 			name="Aq_Items";
 		};
+		class Item19
+		{
+			className="kat_breathing";
+			name="KAT - ADV Medical: Breathing";
+			author="Katalam";
+			url="https://github.com/KAT-Advanced-Medical/KAM";
+		};
+		class Item20
+		{
+			className="kat_airway";
+			name="KAT - ADV Medical: Airway";
+			author="Katalam";
+			url="https://github.com/KAT-Advanced-Medical/KAM";
+		};
+		class Item21
+		{
+			className="kat_misc";
+			name="KAT - ADV Medical: MISC";
+			author="Katalam";
+			url="https://github.com/KAT-Advanced-Medical/KAM";
+		};
+		class Item22
+		{
+			className="A3_Structures_F_Exp_Infrastructure";
+			name="Arma 3 Apex - Infrastructure Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item23
+		{
+			className="ace_field_rations";
+			name="ACE3 - Field Rations";
+			author="Команда ACE";
+			url="https://ace3.acemod.org/";
+		};
 	};
 };
 dlcs[]=
 {
 	"Kart",
-	"RHS_USAF"
+	"RHS_USAF",
+	"Expansion"
 };
 randomSeed=15373329;
 class ScenarioData
@@ -248,7 +293,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=478;
+		items=479;
 		class Item0
 		{
 			dataType="Group";
@@ -261,8 +306,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9677.1943,4.0759802,4106.2456};
-						angles[]={0,5.7634783,0};
+						position[]={9661.3213,3.3236175,4113.8286};
+						angles[]={0,0.89685315,0};
 					};
 					side="West";
 					flags=7;
@@ -272,7 +317,7 @@ class Mission
 					};
 					id=80;
 					type="B_Survivor_F";
-					atlOffset=4.7683716e-07;
+					atlOffset=-2.3841858e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -309,7 +354,7 @@ class Mission
 			{
 			};
 			id=79;
-			atlOffset=4.7683716e-07;
+			atlOffset=-2.3841858e-07;
 		};
 		class Item1
 		{
@@ -7454,8 +7499,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9676.2725,4.0680408,4105.8364};
-						angles[]={0,5.7634783,0};
+						position[]={9660.7754,3.2612388,4114.6768};
+						angles[]={0,0.89685315,0};
 					};
 					side="West";
 					flags=7;
@@ -7465,7 +7510,7 @@ class Mission
 					};
 					id=593;
 					type="B_Survivor_F";
-					atlOffset=4.7683716e-07;
+					atlOffset=2.3841858e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7502,7 +7547,7 @@ class Mission
 			{
 			};
 			id=592;
-			atlOffset=4.7683716e-07;
+			atlOffset=2.3841858e-07;
 		};
 		class Item476
 		{
@@ -7516,8 +7561,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9675.458,4.0658288,4105.4312};
-						angles[]={0,5.6944704,0};
+						position[]={9660.25,3.2061131,4115.4194};
+						angles[]={0,0.82784522,0};
 					};
 					side="West";
 					flags=7;
@@ -7527,6 +7572,7 @@ class Mission
 					};
 					id=595;
 					type="B_Survivor_F";
+					atlOffset=2.3841858e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7563,6 +7609,7 @@ class Mission
 			{
 			};
 			id=594;
+			atlOffset=2.3841858e-07;
 		};
 		class Item477
 		{
@@ -7576,13 +7623,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9674.1738,3.6652179,4112.6069};
-						angles[]={0,3.1690335,0};
+						position[]={9671.5967,3.8300011,4108.3857};
+						angles[]={0,3.4695461,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						rank="LIEUTENANT";
 						isPlayer=1;
 						class Inventory
 						{
@@ -7615,7 +7663,7 @@ class Mission
 							};
 							class uniform
 							{
-								typeName="rhs_uniform_g3_m81";
+								typeName="rhs_uniform_g3_mc";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -7654,7 +7702,7 @@ class Mission
 							};
 							class vest
 							{
-								typeName="rhsusf_mbav_light";
+								typeName="rhsusf_spcs_ocp_squadleader";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -7691,24 +7739,151 @@ class Mission
 									};
 								};
 							};
+							class backpack
+							{
+								typeName="B_AssaultPack_mcamo";
+								isBackpack=1;
+								class ItemCargo
+								{
+									items=14;
+									class Item0
+									{
+										name="ACE_epinephrine";
+										count=2;
+									};
+									class Item1
+									{
+										name="ACE_adenosine";
+										count=2;
+									};
+									class Item2
+									{
+										name="ACE_personalAidKit";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_salineIV";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_salineIV_500";
+										count=1;
+									};
+									class Item5
+									{
+										name="ACE_salineIV_250";
+										count=1;
+									};
+									class Item6
+									{
+										name="kat_chestSeal";
+										count=2;
+									};
+									class Item7
+									{
+										name="ACE_elasticBandage";
+										count=5;
+									};
+									class Item8
+									{
+										name="ACE_fieldDressing";
+										count=5;
+									};
+									class Item9
+									{
+										name="ACE_quikclot";
+										count=5;
+									};
+									class Item10
+									{
+										name="kat_guedel";
+										count=1;
+									};
+									class Item11
+									{
+										name="ACE_packingBandage";
+										count=5;
+									};
+									class Item12
+									{
+										name="ACE_morphine";
+										count=2;
+									};
+									class Item13
+									{
+										name="kat_MFAK";
+										count=1;
+									};
+								};
+							};
 							map="ItemMap";
 							compass="ItemCompass";
 							watch="ItemWatch";
 							radio="ItemRadio";
-							goggles="rhs_googles_black";
-							headgear="rhs_Booniehat_m81";
+							goggles="rhsusf_shemagh_tan";
+							headgear="H_Cap_tan_specops_US";
 						};
 					};
 					id=683;
 					type="rhsusf_socom_marsoc_spotter";
-					atlOffset=-2.3841858e-07;
+					atlOffset=2.8133392e-05;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male06ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes
 			{
+				combatMode="GREEN";
+				behaviour="STEALTH";
 			};
 			id=684;
-			atlOffset=-2.3841858e-07;
+			atlOffset=2.8133392e-05;
+		};
+		class Item478
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9670.5664,4.8958421,4102.9082};
+				angles[]={0,5.5251508,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=698;
+			type="Land_WaterTank_03_F";
 		};
 	};
 };
