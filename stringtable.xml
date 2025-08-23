@@ -186,10 +186,25 @@
 		  <English>Collect water</English>
 		  <Russian>Набрать воду</Russian>
 		</Key>
-		<Key ID="STR_AQ_HOLD_FILLING">
-		  <Original>Hold to fill</Original>
-		  <English>Hold to fill</English>
-		  <Russian>Удерживайте, чтобы набрать</Russian>
+		<Key ID="STR_AQ_ACTION_COLLECT_NOEMPTY">
+		  <Original>There is no empty container.</Original>
+		  <English>There is no empty container.</English>
+		  <Russian>Нет пустой тары.</Russian>
+		</Key>
+		<Key ID="STR_AQ_ACTION_COLLECT_WATER_WE_COLLECT">
+		  <Original>We collect water...</Original>
+		  <English>We collect water...</English>
+		  <Russian>Набираем воду...</Russian>
+		</Key>
+		<Key ID="STR_AQ_ACTION_COLLECT_WATER_FULL">
+		  <Original>The water is full.</Original>
+		  <English>The water is full.</English>
+		  <Russian>Вода набрана.</Russian>
+		</Key>
+		<Key ID="STR_AQ_ACTION_COLLECT_WATER_SUPPLY">
+		  <Original>The water supply is interrupted.</Original>
+		  <English>The water supply is interrupted.</English>
+		  <Russian>Набор воды прерван.</Russian>
 		</Key>
 	</Package>
 </Project>

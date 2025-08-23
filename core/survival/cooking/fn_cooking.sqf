@@ -93,14 +93,10 @@ AQ_fnc_water_setupAction = {
         sleep 0.5;
         player playAction "Crouch";
         sleep 1.3;
-
-        //#####################
-          uiNamespace setVariable ["AQ_snd_src", player say3D "Aq_CollectWater"];
-        //#####################
-
+        playSound "Aq_CollectWater";
         [
           localize "STR_AQ_ACTION_COLLECT_WATER_WE_COLLECT",         // _title STRING
-          20,                          // _totalTime NUMBER (сек)
+          35,                          // _totalTime NUMBER (сек)
           {                           // _condition CODE (каждый кадр; true => продолжаем)
             ([player] call AQ_fnc_water_isNearSource) && { alive player }
           },
@@ -121,17 +117,11 @@ AQ_fnc_water_setupAction = {
               player addItem _full;
             };
 
-            deleteVehicle (uiNamespace getVariable ["AQ_snd_src", objNull]);
-            uiNamespace setVariable ["AQ_snd_src", objNull];
-
             titleText [localize "STR_AQ_ACTION_COLLECT_WATER_FULL", "PLAIN DOWN", 0.25];
             if ((currentWeapon player)=="") then { player action["SWITCHWEAPON",player,player,3]; };
             player playAction "Up";
           },
           {                           // _onFailure CODE (ушёл/ESC и т.п.)
-            deleteVehicle (uiNamespace getVariable ["AQ_snd_src", objNull]);
-            uiNamespace setVariable ["AQ_snd_src", objNull];
-
             titleText [localize "STR_AQ_ACTION_COLLECT_WATER_SUPPLY", "PLAIN DOWN", 0.25];
             if ((currentWeapon player)=="") then { player action["SWITCHWEAPON",player,player,3]; };
             player playAction "Up";
